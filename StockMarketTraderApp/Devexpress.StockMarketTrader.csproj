@@ -1,0 +1,21 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>netcoreapp3.0</TargetFramework>
+    <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+    <AssemblyName>DevExpress.StockMarketTrader</AssemblyName>
+    <RootNamespace>DevExpress.StockMarketTrader</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="DevExpress.WindowsDesktop.Win" Version="18.2.4-ctp" />
+    <PackageReference Include="System.ServiceModel.Http" Version="4.5.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="**\*.svg" />
+    <EmbeddedResource Include="Images\DX.ico" />
+    <EmbeddedResource Include="Data\*.xml" />
+  </ItemGroup>
+
+</Project>

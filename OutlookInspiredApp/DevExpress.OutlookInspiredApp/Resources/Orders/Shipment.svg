@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 21.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="ShipmentStatus" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
+	 y="0px" viewBox="0 0 16 16" style="enable-background:new 0 0 16 16;" xml:space="preserve">
+<style type="text/css">
+	.Blue{fill:#4D82B8;}
+</style>
+<path class="Blue" d="M12.3,4.3C12.1,4.1,11.9,4,11.6,4H11V3c0-0.5-0.5-1-1-1H1C0.5,2,0,2.5,0,3v9h1.1c0.2,1.1,1.2,2,2.4,2
+	s2.2-0.9,2.4-2h4.1c0.2,1.1,1.2,2,2.4,2s2.2-0.9,2.4-2H16V8L12.3,4.3z M3.5,13C2.7,13,2,12.3,2,11.5S2.7,10,3.5,10S5,10.7,5,11.5
+	S4.3,13,3.5,13z M12.5,13c-0.8,0-1.5-0.7-1.5-1.5s0.7-1.5,1.5-1.5s1.5,0.7,1.5,1.5S13.3,13,12.5,13z M11,8V5h0.6l3,3H11z"/>
+</svg>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Companies>
+<Company Id="0" Name="MSFT" />
+<Company Id="1" Name="EBAY" />
+<Company Id="2" Name="ERTS" />
+<Company Id="3" Name="YHOO" />
+<Company Id="4" Name="CSCO" />
+<Company Id="5" Name="AAPL" />
+<Company Id="6" Name="IBM" />
+</Companies>

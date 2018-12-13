@@ -1,0 +1,42 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
+	<PropertyGroup>
+    <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+    <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
+		<OutputType>WinExe</OutputType>
+		<TargetFramework>netcoreapp3.0</TargetFramework>
+		<Product>DevExpress WinForms</Product>
+		<PackageId>DevExpress Outlook Inspired Application</PackageId>
+		<Version>18.2.0.0</Version>		
+		<Configurations>Debug;Release</Configurations>
+		<AssemblyName>DevExpress.OutlookInspiredApp.Win</AssemblyName>
+		<RootNamespace>DevExpress.DevAV</RootNamespace>
+    <OutputPath>..\bin\</OutputPath>
+	</PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="3.0.0-preview.18572.1" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Proxies" Version="2.2.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="3.0.0-preview.18572.1" />
+    <PackageReference Include="System.Text.Encoding.CodePages" Version="4.5.1-servicing-27114-05" />
+    
+    <PackageReference Include="DevExpress.WindowsDesktop.Win" Version="18.2.4-ctp" />
+    <ProjectReference Include="..\DevExpress.DevAV\DevExpress.DevAV.csproj" />
+  </ItemGroup>
+  
+  <ItemGroup>
+    <EmbeddedResource Include="**\*.svg" />
+    <EmbeddedResource Include="Resources\*.ico" />
+    <EmbeddedResource Include="Resources\Analysis\*.xml" />
+    <EmbeddedResource Include="Resources\MailMerge\*.rtf" />
+    <EmbeddedResource Include="Resources\MailMerge\*.snx" />
+    <EmbeddedResource Remove="Modules\Sales\QuickReportView\OrderDocQuickReportView.resx" />
+    <Content Include="app.config" />
+  </ItemGroup>
+  
+  <ItemGroup>
+    <None Include="Modules\Sales\QuickReportView\OrderDocQuickReportView.resx" />
+  </ItemGroup>
+	
+  <Target Name="PostBuild" AfterTargets="PostBuildEvent">
+	  <Exec Command="&#xD;&#xA;      copy /Y &quot;$(SolutionDir)Data\devav.sqlite3&quot; &quot;$(SolutionDir)Bin\devav.sqlite3&quot;&#xD;&#xA;      copy /Y &quot;$(SolutionDir)Data\EnglishAlphabet.txt&quot; &quot;$(SolutionDir)Bin\EnglishAlphabet.txt&quot;&#xD;&#xA;" />
+	</Target>
+</Project>

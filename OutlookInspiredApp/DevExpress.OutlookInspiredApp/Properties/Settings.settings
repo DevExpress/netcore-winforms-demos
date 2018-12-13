@@ -1,0 +1,220 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="DevExpress.DevAV.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="EmployeesCustomFilters" Type="DevExpress.DevAV.ViewModels.FilterInfoList" Scope="User">
+      <Value Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;ArrayOfFilterInfo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
+  &lt;FilterInfo&gt;
+    &lt;Name&gt;On probation &lt;/Name&gt;
+    &lt;FilterCriteria&gt;Not IsNull([ProbationReason])&lt;/FilterCriteria&gt;
+  &lt;/FilterInfo&gt;
+&lt;/ArrayOfFilterInfo&gt;</Value>
+    </Setting>
+    <Setting Name="EmployeesStaticFilters" Type="DevExpress.DevAV.ViewModels.FilterInfoList" Scope="User">
+      <Value Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;ArrayOfFilterInfo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
+  &lt;FilterInfo&gt;
+    &lt;Name&gt;All&lt;/Name&gt;
+  &lt;/FilterInfo&gt;
+  &lt;FilterInfo&gt;
+    &lt;Name&gt;Salaried&lt;/Name&gt;
+    &lt;FilterCriteria&gt;[Status] = ##Enum#DevExpress.DevAV.EmployeeStatus,Salaried#&lt;/FilterCriteria&gt;
+  &lt;/FilterInfo&gt;
+  &lt;FilterInfo&gt;
+    &lt;Name&gt;Commission&lt;/Name&gt;
+    &lt;FilterCriteria&gt;[Status] = ##Enum#DevExpress.DevAV.EmployeeStatus,Commission#&lt;/FilterCriteria&gt;
+  &lt;/FilterInfo&gt;
+  &lt;FilterInfo&gt;
+    &lt;Name&gt;Contract&lt;/Name&gt;
+    &lt;FilterCriteria&gt;[Status] = ##Enum#DevExpress.DevAV.EmployeeStatus,Contract#&lt;/FilterCriteria&gt;
+  &lt;/FilterInfo&gt;
+  &lt;FilterInfo&gt;
+    &lt;Name&gt;Terminated&lt;/Name&gt;
+    &lt;FilterCriteria&gt;[Status] = ##Enum#DevExpress.DevAV.EmployeeStatus,Terminated#&lt;/FilterCriteria&gt;
+  &lt;/FilterInfo&gt;
+  &lt;FilterInfo&gt;
+    &lt;Name&gt;On Leave&lt;/Name&gt;
+    &lt;FilterCriteria&gt;[Status] = ##Enum#DevExpress.DevAV.EmployeeStatus,OnLeave#&lt;/FilterCriteria&gt;
+  &lt;/FilterInfo&gt;
+&lt;/ArrayOfFilterInfo&gt;</Value>
+    </Setting>
+    <Setting Name="CustomersCustomFilters" Type="DevExpress.DevAV.ViewModels.FilterInfoList" Scope="User">
+      <Value Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;ArrayOfFilterInfo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
+  &lt;FilterInfo&gt;
+    &lt;Name&gt;Active&lt;/Name&gt;
+    &lt;FilterCriteria&gt;[Status] = ##Enum#DevExpress.DevAV.CustomerStatus,Active#&lt;/FilterCriteria&gt;
+  &lt;/FilterInfo&gt;
+  &lt;FilterInfo&gt;
+    &lt;Name&gt;Suspended&lt;/Name&gt;
+    &lt;FilterCriteria&gt;[Status] = ##Enum#DevExpress.DevAV.CustomerStatus,Suspended#&lt;/FilterCriteria&gt;
+  &lt;/FilterInfo&gt;
+&lt;/ArrayOfFilterInfo&gt;</Value>
+    </Setting>
+    <Setting Name="CustomersStaticFilters" Type="DevExpress.DevAV.ViewModels.FilterInfoList" Scope="User">
+      <Value Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;ArrayOfFilterInfo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
+  &lt;FilterInfo&gt;
+    &lt;Name&gt;All&lt;/Name&gt;
+  &lt;/FilterInfo&gt;
+  &lt;FilterInfo&gt;
+    &lt;Name&gt;Stores &amp;gt; 10 Locations&lt;/Name&gt;
+    &lt;FilterCriteria&gt;[TotalStores] &amp;gt; 10&lt;/FilterCriteria&gt;
+  &lt;/FilterInfo&gt;
+  &lt;FilterInfo&gt;
+    &lt;Name&gt;Revenues &amp;gt; 100 Billion&lt;/Name&gt;
+    &lt;FilterCriteria&gt;[AnnualRevenue] &amp;gt; 100000000000.0m&lt;/FilterCriteria&gt;
+  &lt;/FilterInfo&gt;
+  &lt;FilterInfo&gt;
+    &lt;Name&gt;Employees &amp;gt; 10000&lt;/Name&gt;
+    &lt;FilterCriteria&gt;[TotalEmployees] &amp;gt; 10000&lt;/FilterCriteria&gt;
+  &lt;/FilterInfo&gt;
+&lt;/ArrayOfFilterInfo&gt;</Value>
+    </Setting>
+    <Setting Name="ProductsCustomFilters" Type="DevExpress.DevAV.ViewModels.FilterInfoList" Scope="User">
+      <Value Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;ArrayOfFilterInfo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
+  &lt;FilterInfo&gt;
+    &lt;Name&gt;Discontinued&lt;/Name&gt;
+    &lt;FilterCriteria&gt;[Available] = False&lt;/FilterCriteria&gt;
+  &lt;/FilterInfo&gt;
+  &lt;FilterInfo&gt;
+    &lt;Name&gt;Out of Stock&lt;/Name&gt;
+    &lt;FilterCriteria&gt;[CurrentInventory] = 0&lt;/FilterCriteria&gt;
+  &lt;/FilterInfo&gt;
+&lt;/ArrayOfFilterInfo&gt;</Value>
+    </Setting>
+    <Setting Name="ProductsStaticFilters" Type="DevExpress.DevAV.ViewModels.FilterInfoList" Scope="User">
+      <Value Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;ArrayOfFilterInfo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
+  &lt;FilterInfo&gt;
+    &lt;Name&gt;All&lt;/Name&gt;
+  &lt;/FilterInfo&gt;
+  &lt;FilterInfo&gt;
+    &lt;Name&gt;Video Players&lt;/Name&gt;
+    &lt;FilterCriteria&gt;[Category] = ##Enum#DevExpress.DevAV.ProductCategory,VideoPlayers#&lt;/FilterCriteria&gt;
+  &lt;/FilterInfo&gt;
+  &lt;FilterInfo&gt;
+    &lt;Name&gt;Automation&lt;/Name&gt;
+    &lt;FilterCriteria&gt;[Category] = ##Enum#DevExpress.DevAV.ProductCategory,Automation#&lt;/FilterCriteria&gt;
+  &lt;/FilterInfo&gt;
+  &lt;FilterInfo&gt;
+    &lt;Name&gt;Monitors&lt;/Name&gt;
+    &lt;FilterCriteria&gt;[Category] = ##Enum#DevExpress.DevAV.ProductCategory,Monitors#&lt;/FilterCriteria&gt;
+  &lt;/FilterInfo&gt;
+  &lt;FilterInfo&gt;
+    &lt;Name&gt;Projectors&lt;/Name&gt;
+    &lt;FilterCriteria&gt;[Category] = ##Enum#DevExpress.DevAV.ProductCategory,Projectors#&lt;/FilterCriteria&gt;
+  &lt;/FilterInfo&gt;
+  &lt;FilterInfo&gt;
+    &lt;Name&gt;Televisions&lt;/Name&gt;
+    &lt;FilterCriteria&gt;[Category] = ##Enum#DevExpress.DevAV.ProductCategory,Televisions#&lt;/FilterCriteria&gt;
+  &lt;/FilterInfo&gt;
+&lt;/ArrayOfFilterInfo&gt;</Value>
+    </Setting>
+    <Setting Name="OrdersCustomFilters" Type="DevExpress.DevAV.ViewModels.FilterInfoList" Scope="User">
+      <Value Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;ArrayOfFilterInfo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
+  &lt;FilterInfo&gt;
+    &lt;Name&gt;Sales &amp;gt; $5000&lt;/Name&gt;
+    &lt;FilterCriteria&gt;[TotalAmount] &amp;gt; 5000.0m&lt;/FilterCriteria&gt;
+  &lt;/FilterInfo&gt;
+  &lt;FilterInfo&gt;
+    &lt;Name&gt;Sales &amp;lt; $5000&lt;/Name&gt;
+    &lt;FilterCriteria&gt;[TotalAmount] &amp;lt; 5000.0m&lt;/FilterCriteria&gt;
+  &lt;/FilterInfo&gt;
+  &lt;FilterInfo&gt;
+    &lt;Name&gt;Sales by Jim Packard&lt;/Name&gt;
+    &lt;FilterCriteria&gt;[EmployeeId] = 41&lt;/FilterCriteria&gt;
+  &lt;/FilterInfo&gt;
+  &lt;FilterInfo&gt;
+    &lt;Name&gt;Sales by Harv Mudd&lt;/Name&gt;
+    &lt;FilterCriteria&gt;[EmployeeId] = 43&lt;/FilterCriteria&gt;
+  &lt;/FilterInfo&gt;
+  &lt;FilterInfo&gt;
+    &lt;Name&gt;Sales by Clark Morgan&lt;/Name&gt;
+    &lt;FilterCriteria&gt;[EmployeeId] = 44&lt;/FilterCriteria&gt;
+  &lt;/FilterInfo&gt;
+  &lt;FilterInfo&gt;
+    &lt;Name&gt;Sales by Todd Hoffman&lt;/Name&gt;
+    &lt;FilterCriteria&gt;[EmployeeId] = 45&lt;/FilterCriteria&gt;
+  &lt;/FilterInfo&gt;
+&lt;/ArrayOfFilterInfo&gt;</Value>
+    </Setting>
+    <Setting Name="OrdersStaticFilters" Type="DevExpress.DevAV.ViewModels.FilterInfoList" Scope="User">
+      <Value Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;ArrayOfFilterInfo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
+  &lt;FilterInfo&gt;
+    &lt;Name&gt;All&lt;/Name&gt;
+  &lt;/FilterInfo&gt;
+  &lt;FilterInfo&gt;
+    &lt;Name&gt;Today&lt;/Name&gt;
+    &lt;FilterCriteria&gt;IsOutlookIntervalToday([OrderDate])&lt;/FilterCriteria&gt;
+  &lt;/FilterInfo&gt;
+  &lt;FilterInfo&gt;
+    &lt;Name&gt;Yesterday&lt;/Name&gt;
+    &lt;FilterCriteria&gt;IsOutlookIntervalYesterday([OrderDate])&lt;/FilterCriteria&gt;
+  &lt;/FilterInfo&gt;
+  &lt;FilterInfo&gt;
+    &lt;Name&gt;This Month&lt;/Name&gt;
+    &lt;FilterCriteria&gt;IsThisMonth([OrderDate])&lt;/FilterCriteria&gt;
+  &lt;/FilterInfo&gt;
+  &lt;FilterInfo&gt;
+    &lt;Name&gt;This Year&lt;/Name&gt;
+    &lt;FilterCriteria&gt;IsOutlookIntervalEarlierThisYear([OrderDate])&lt;/FilterCriteria&gt;
+  &lt;/FilterInfo&gt;
+  &lt;FilterInfo&gt;
+    &lt;Name&gt;Unpaid Orders&lt;/Name&gt;
+    &lt;FilterCriteria&gt;[PaymentTotal] = 0.0m&lt;/FilterCriteria&gt;
+  &lt;/FilterInfo&gt;
+  &lt;FilterInfo&gt;
+    &lt;Name&gt;Redunds&lt;/Name&gt;
+    &lt;FilterCriteria&gt;[RefundTotal] = [TotalAmount]&lt;/FilterCriteria&gt;
+  &lt;/FilterInfo&gt;
+&lt;/ArrayOfFilterInfo&gt;</Value>
+    </Setting>
+    <Setting Name="QuotesCustomFilters" Type="DevExpress.DevAV.ViewModels.FilterInfoList" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="QuotesStaticFilters" Type="DevExpress.DevAV.ViewModels.FilterInfoList" Scope="User">
+      <Value Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;ArrayOfFilterInfo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
+  &lt;FilterInfo&gt;
+    &lt;Name&gt;All&lt;/Name&gt;
+  &lt;/FilterInfo&gt;
+  &lt;FilterInfo&gt;
+    &lt;Name&gt;Today&lt;/Name&gt;
+    &lt;FilterCriteria&gt;IsOutlookIntervalToday([Date])&lt;/FilterCriteria&gt;
+  &lt;/FilterInfo&gt;
+  &lt;FilterInfo&gt;
+    &lt;Name&gt;Yesterday&lt;/Name&gt;
+    &lt;FilterCriteria&gt;IsOutlookIntervalYesterday([Date])&lt;/FilterCriteria&gt;
+  &lt;/FilterInfo&gt;
+  &lt;FilterInfo&gt;
+    &lt;Name&gt;This Month&lt;/Name&gt;
+    &lt;FilterCriteria&gt;IsThisMonth([Date])&lt;/FilterCriteria&gt;
+  &lt;/FilterInfo&gt;
+  &lt;FilterInfo&gt;
+    &lt;Name&gt;This Year&lt;/Name&gt;
+    &lt;FilterCriteria&gt;IsOutlookIntervalEarlierThisYear([Date])&lt;/FilterCriteria&gt;
+  &lt;/FilterInfo&gt;
+&lt;/ArrayOfFilterInfo&gt;</Value>
+    </Setting>
+    <Setting Name="EmployeesGroupFilters" Type="DevExpress.DevAV.ViewModels.FilterInfoList" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="CustomersGroupFilters" Type="DevExpress.DevAV.ViewModels.FilterInfoList" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="ProductsGroupFilters" Type="DevExpress.DevAV.ViewModels.FilterInfoList" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="OrdersGroupFilters" Type="DevExpress.DevAV.ViewModels.FilterInfoList" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="QuotesGroupFilters" Type="DevExpress.DevAV.ViewModels.FilterInfoList" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+  </Settings>
+</SettingsFile>
