@@ -174,15 +174,15 @@
             // 
             this.editBBI.Caption = "Edit Invoice";
             this.editBBI.Id = 0;
-            //this.editBBI.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("editBBI.ImageOptions.SvgImage")));
-            //this.editBBI.ImageOptions.SvgImageSize = new System.Drawing.Size(16, 16);
+            this.editBBI.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("editBBI.ImageOptions.SvgImage")));
+            this.editBBI.ImageOptions.SvgImageSize = new System.Drawing.Size(16, 16);
             this.editBBI.Name = "editBBI";
             // 
             // deleteBBI
             // 
             this.deleteBBI.Caption = "Delete Sale Record";
             this.deleteBBI.Id = 1;
-            //this.deleteBBI.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("deleteBBI.ImageOptions.SvgImage")));
+            this.deleteBBI.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("deleteBBI.ImageOptions.SvgImage")));
             this.deleteBBI.ImageOptions.SvgImageSize = new System.Drawing.Size(16, 16);
             this.deleteBBI.Name = "deleteBBI";
             // 
@@ -190,7 +190,7 @@
             // 
             this.emailBBI.Caption = "Send Invoice via Email";
             this.emailBBI.Id = 2;
-            //this.emailBBI.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("emailBBI.ImageOptions.SvgImage")));
+            this.emailBBI.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("emailBBI.ImageOptions.SvgImage")));
             this.emailBBI.ImageOptions.SvgImageSize = new System.Drawing.Size(16, 16);
             this.emailBBI.Name = "emailBBI";
             // 
@@ -198,7 +198,7 @@
             // 
             this.printBBI.Caption = "Print Invoice";
             this.printBBI.Id = 3;
-            //this.printBBI.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("printBBI.ImageOptions.SvgImage")));
+            this.printBBI.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("printBBI.ImageOptions.SvgImage")));
             this.printBBI.ImageOptions.SvgImageSize = new System.Drawing.Size(16, 16);
             this.printBBI.Name = "printBBI";
             // 
@@ -206,7 +206,7 @@
             // 
             this.paidBBI.Caption = "Mark as Paid";
             this.paidBBI.Id = 4;
-            //this.paidBBI.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("paidBBI.ImageOptions.SvgImage")));
+            this.paidBBI.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("paidBBI.ImageOptions.SvgImage")));
             this.paidBBI.ImageOptions.SvgImageSize = new System.Drawing.Size(16, 16);
             this.paidBBI.Name = "paidBBI";
             // 
@@ -214,7 +214,7 @@
             // 
             this.refundBBI.Caption = "Issue Full Refund";
             this.refundBBI.Id = 5;
-            //this.refundBBI.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("refundBBI.ImageOptions.SvgImage")));
+            this.refundBBI.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("refundBBI.ImageOptions.SvgImage")));
             this.refundBBI.ImageOptions.SvgImageSize = new System.Drawing.Size(16, 16);
             this.refundBBI.Name = "refundBBI";
             // 
@@ -222,7 +222,7 @@
             // 
             this.previousBBI.Caption = "Previous Record";
             this.previousBBI.Id = 6;
-            //this.previousBBI.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("previousBBI.ImageOptions.SvgImage")));
+            this.previousBBI.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("previousBBI.ImageOptions.SvgImage")));
             this.previousBBI.ImageOptions.SvgImageSize = new System.Drawing.Size(16, 16);
             this.previousBBI.Name = "previousBBI";
             // 
@@ -230,7 +230,7 @@
             // 
             this.nextBBI.Caption = "Next Record";
             this.nextBBI.Id = 7;
-            //this.nextBBI.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("nextBBI.ImageOptions.SvgImage")));
+            this.nextBBI.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("nextBBI.ImageOptions.SvgImage")));
             this.nextBBI.ImageOptions.SvgImageSize = new System.Drawing.Size(16, 16);
             this.nextBBI.Name = "nextBBI";
             // 

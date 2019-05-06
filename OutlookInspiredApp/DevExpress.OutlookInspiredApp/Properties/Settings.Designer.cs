@@ -71,7 +71,7 @@ namespace DevExpress.DevAV.Properties {
 </ArrayOfFilterInfo>")]
         public global::DevExpress.DevAV.ViewModels.FilterInfoList EmployeesStaticFilters {
             get {
-               return ((global::DevExpress.DevAV.ViewModels.FilterInfoList)(this["EmployeesStaticFilters"]));
+                return ((global::DevExpress.DevAV.ViewModels.FilterInfoList)(this["EmployeesStaticFilters"]));
             }
             set {
                 this["EmployeesStaticFilters"] = value;

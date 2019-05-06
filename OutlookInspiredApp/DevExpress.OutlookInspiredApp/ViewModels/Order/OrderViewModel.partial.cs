@@ -1,7 +1,7 @@
 namespace DevExpress.DevAV.ViewModels {
     using System;
     using System.Collections.Generic;
-    
+    using DevExpress.DevAV.Reports.Spreadsheet;
     using DevExpress.Mvvm.DataAnnotations;
     using DevExpress.Mvvm.POCO;
     using System.Linq;
@@ -106,25 +106,25 @@ namespace DevExpress.DevAV.ViewModels {
         public IEnumerable<CustomerStore> GetCustomerStores(long? customerId) {
             return UnitOfWork.CustomerStores.Where(x => Nullable.Equals(x.CustomerId, customerId));
         }
-        //[Command(false)]
-        //public Tuple<OrderCollections, Order> CreateInvoiceDataSource() {
-        //    var collections = new OrderCollections();
-        //    collections.Customers = UnitOfWork.Customers;
-        //    collections.Products = UnitOfWork.Products;
-        //    collections.Employees = UnitOfWork.Employees;
-        //    collections.CustomerStores = GetCustomerStores(Entity.CustomerId);
-        //    return new Tuple<OrderCollections, Order>(collections, Entity);
-        //}
+        [Command(false)]
+        public Tuple<OrderCollections, Order> CreateInvoiceDataSource() {
+            var collections = new OrderCollections();
+            collections.Customers = UnitOfWork.Customers;
+            collections.Products = UnitOfWork.Products;
+            collections.Employees = UnitOfWork.Employees;
+            collections.CustomerStores = GetCustomerStores(Entity.CustomerId);
+            return new Tuple<OrderCollections, Order>(collections, Entity);
+        }
         public override bool CanSave() {
             return base.CanSave() && Entity.OrderItems.Any();
         }
     }
 
     public partial class SynchronizedOrderViewModel : OrderViewModel {
-        protected override bool EnableEntityChangedSynchronization {
+        protected override bool EnableSelectedItemSynchronization {
             get { return true; }
         }
-        protected override bool EnableSelectedItemSynchronization {
+        protected override bool EnableEntityChangedSynchronization {
             get { return true; }
         }
     }

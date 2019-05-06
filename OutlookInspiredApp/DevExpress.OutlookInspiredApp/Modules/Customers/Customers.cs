@@ -26,10 +26,6 @@
             //
             InitViewKind();
             InitViewLayout();
-            //netcore3
-            galleryQuickReports.Enabled = false;
-            biPrintSubItem.Enabled = false;
-            biSalesAnalysis.Enabled = false;
         }
         protected override void OnDisposing() {
             CollectionPresenter.Dispose();

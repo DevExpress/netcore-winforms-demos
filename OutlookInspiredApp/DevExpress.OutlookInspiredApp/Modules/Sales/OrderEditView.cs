@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Drawing;
 using System.Windows.Forms;
-
+using DevExpress.DevAV.Reports.Spreadsheet;
 using DevExpress.DevAV.ViewModels;
 using DevExpress.Spreadsheet;
 using DevExpress.Utils.Drawing;
@@ -32,42 +32,42 @@ namespace DevExpress.DevAV.Modules {
         protected override void OnLoad(EventArgs e) {
             base.OnLoad(e);
             BindCommands();
-            //LoadInvoiceTemplate();
-            //CreateInvoiceHelper();
+            LoadInvoiceTemplate();
+            CreateInvoiceHelper();
         }
         public OrderViewModel ViewModel {
             get { return GetViewModel<OrderViewModel>(); }
         }
-        //void LoadInvoiceTemplate() {
-        //    using(var stream = InvoiceHelper.GetInvoiceTemplate())
-        //        spreadsheetControl1.LoadDocument(stream);
-        //}
-        //InvoiceHelper invoiceHelper;
-        //void CreateInvoiceHelper() {
-        //    var actions = CreateInvoiceEditActions();
-        //    var dataSource = ViewModel.CreateInvoiceDataSource();
-        //    this.invoiceHelper = new InvoiceHelper(spreadsheetControl1.Document, dataSource, actions);
-        //}
-        //EditActions CreateInvoiceEditActions() {
-        //    EditActions actions = new EditActions();
-        //    actions.IsDefaultActions = false;
-        //    // Do not simplify lines below due to VB convertation
-        //    actions.GetCustomerStores = new Func<long?, IEnumerable<CustomerStore>>(ViewModel.GetCustomerStores);
-        //    actions.CreateOrderItem = new Func<OrderItem>(ViewModel.CreateOrderItem);
-        //    actions.AddOrderItem = new Action<OrderItem>(ViewModel.AddOrderItem);
-        //    actions.RemoveOrderItem = new Action<OrderItem>(ViewModel.RemoveOrderItem);
-        //    actions.ActivateEditor = new Action(SpreadsheetControl_ActivateEditor);
-        //    actions.CloseEditor = new Action(SpreadsheetControl_CloseEditor);
-        //    // Do not simplify lines above due to VB convertation
-        //    return actions;
-        //}
-        //void SpreadsheetControl_ActivateEditor() {
-        //    Worksheet activeSheet = spreadsheetControl1.ActiveWorksheet;
-        //    if(activeSheet.Name == CellsHelper.InvoiceWorksheetName) {
-        //        if(activeSheet.CustomCellInplaceEditors.GetCustomCellInplaceEditors(activeSheet.Selection).Count > 0)
-        //            spreadsheetControl1.OpenCellEditor(XtraSpreadsheet.CellEditorMode.Edit);
-        //    }
-        //}
+        void LoadInvoiceTemplate() {
+            using(var stream = InvoiceHelper.GetInvoiceTemplate())
+                spreadsheetControl1.LoadDocument(stream);
+        }
+        InvoiceHelper invoiceHelper;
+        void CreateInvoiceHelper() {
+            var actions = CreateInvoiceEditActions();
+            var dataSource = ViewModel.CreateInvoiceDataSource();
+            this.invoiceHelper = new InvoiceHelper(spreadsheetControl1.Document, dataSource, actions);
+        }
+        EditActions CreateInvoiceEditActions() {
+            EditActions actions = new EditActions();
+            actions.IsDefaultActions = false;
+            // Do not simplify lines below due to VB convertation
+            actions.GetCustomerStores = new Func<long?, IEnumerable<CustomerStore>>(ViewModel.GetCustomerStores);
+            actions.CreateOrderItem = new Func<OrderItem>(ViewModel.CreateOrderItem);
+            actions.AddOrderItem = new Action<OrderItem>(ViewModel.AddOrderItem);
+            actions.RemoveOrderItem = new Action<OrderItem>(ViewModel.RemoveOrderItem);
+            actions.ActivateEditor = new Action(SpreadsheetControl_ActivateEditor);
+            actions.CloseEditor = new Action(SpreadsheetControl_CloseEditor);
+            // Do not simplify lines above due to VB convertation
+            return actions;
+        }
+        void SpreadsheetControl_ActivateEditor() {
+            Worksheet activeSheet = spreadsheetControl1.ActiveWorksheet;
+            if(activeSheet.Name == CellsHelper.InvoiceWorksheetName) {
+                if(activeSheet.CustomCellInplaceEditors.GetCustomCellInplaceEditors(activeSheet.Selection).Count > 0)
+                    spreadsheetControl1.OpenCellEditor(XtraSpreadsheet.CellEditorMode.Edit);
+            }
+        }
         void SpreadsheetControl_CloseEditor() {
             if(spreadsheetControl1.IsCellEditorActive)
                 spreadsheetControl1.CloseCellEditor(XtraSpreadsheet.CellEditorEnterValueMode.Cancel);
@@ -75,25 +75,25 @@ namespace DevExpress.DevAV.Modules {
         void SpreadsheetControl_CustomCellEdit(object sender, XtraSpreadsheet.SpreadsheetCustomCellEditEventArgs e) {
             if(!e.ValueObject.IsText)
                 return;
-            //var editorInfo = CellsHelper.FindEditor(e.ValueObject.TextValue);
-            //if(editorInfo != null && e.RepositoryItem is RepositoryItemSpinEdit) {
-            //    RepositoryItemSpinEdit repositoryItemSpinEdit = e.RepositoryItem as RepositoryItemSpinEdit;
-            //    repositoryItemSpinEdit.MinValue = editorInfo.MinValue;
-            //    repositoryItemSpinEdit.MaxValue = editorInfo.MaxValue;
-            //    repositoryItemSpinEdit.Increment = editorInfo.Increment;
-            //    repositoryItemSpinEdit.IsFloatValue = false;
-            //}
+            var editorInfo = CellsHelper.FindEditor(e.ValueObject.TextValue);
+            if(editorInfo != null && e.RepositoryItem is RepositoryItemSpinEdit) {
+                RepositoryItemSpinEdit repositoryItemSpinEdit = e.RepositoryItem as RepositoryItemSpinEdit;
+                repositoryItemSpinEdit.MinValue = editorInfo.MinValue;
+                repositoryItemSpinEdit.MaxValue = editorInfo.MaxValue;
+                repositoryItemSpinEdit.Increment = editorInfo.Increment;
+                repositoryItemSpinEdit.IsFloatValue = false;
+            }
         }
         void SpreadsheetControl_SelectionChanged(object sender, EventArgs e) {
-            //invoiceHelper.SelectionChanged();
+            invoiceHelper.SelectionChanged();
         }
         void SpreadsheetControl_CellValueChanged(object sender, XtraSpreadsheet.SpreadsheetCellEventArgs e) {
-            //invoiceHelper.CellValueChanged(sender, e);
+            invoiceHelper.CellValueChanged(sender, e);
             ViewModel.Update();
         }
         void SpreadsheetControl_MouseClick(object sender, MouseEventArgs e) {
-            //if(e.Button == MouseButtons.Left)
-            //    invoiceHelper.OnPreviewMouseLeftButton(spreadsheetControl1.GetCellFromPoint(e.Location));
+            if(e.Button == MouseButtons.Left)
+                invoiceHelper.OnPreviewMouseLeftButton(spreadsheetControl1.GetCellFromPoint(e.Location));
         }
         void SpreadsheetControl_ProtectionWarning(object sender, HandledEventArgs e) {
             e.Handled = true;

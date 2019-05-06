@@ -729,8 +729,7 @@
             this.colPrefix.FieldName = "Prefix";
             this.colPrefix.ImageOptions.Alignment = System.Drawing.StringAlignment.Center;
             this.colPrefix.ImageOptions.Image = global::DevExpress.DevAV.Properties.Resources.icon_prefix_16;
-            this.colPrefix.ImageOptions.ImageUri.ResourceType = typeof(DevExpress.DevAV.MainForm);
-            this.colPrefix.ImageOptions.ImageUri.Uri = "resource://DevExpress.DevAV.Resources.NewGroup.svg";
+            this.colPrefix.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("colPrefix.ImageOptions.SvgImage")));
             this.colPrefix.ImageOptions.SvgImageSize = new System.Drawing.Size(16, 16);
             this.colPrefix.Name = "colPrefix";
             this.colPrefix.OptionsColumn.AllowFocus = false;

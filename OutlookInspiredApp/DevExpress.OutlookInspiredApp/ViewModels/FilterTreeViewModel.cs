@@ -5,6 +5,7 @@
     using System.ComponentModel.DataAnnotations;
     using DevExpress.Data.Filtering;
     using DevExpress.Mvvm.DataModel;
+
     using DevExpress.DevAV.Common.Utils;
     using DevExpress.DevAV.Common.ViewModel;
     using DevExpress.DevAV.ViewModels;

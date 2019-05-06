@@ -244,7 +244,7 @@
             // 
             // images
             // 
-            //this.images.ImageStream = ((DevExpress.Utils.ImageCollectionStreamer)(resources.GetObject("images.ImageStream")));
+            this.images.ImageStream = ((DevExpress.Utils.ImageCollectionStreamer)(resources.GetObject("images.ImageStream")));
             this.images.TransparentColor = System.Drawing.Color.Transparent;
             this.images.InsertImage(global::DevExpress.DevAV.Properties.Resources.glyph_message_16, "glyph_message_16", typeof(global::DevExpress.DevAV.Properties.Resources), 0);
             this.images.Images.SetKeyName(0, "glyph_message_16");
@@ -306,7 +306,7 @@
             this.navigationItemTasks});
             this.officeTabFilter.Location = new System.Drawing.Point(2, 150);
             this.officeTabFilter.Name = "officeTabFilter";
-            this.officeTabFilter.SelectedItem = this.navigationItemEvaluations;
+            this.officeTabFilter.SelectedItem = this.navigationItemTasks;
             this.officeTabFilter.Size = new System.Drawing.Size(574, 31);
             this.officeTabFilter.TabIndex = 10;
             this.officeTabFilter.ViewMode = DevExpress.XtraBars.Navigation.OfficeNavigationBarViewMode.Tab;
@@ -749,11 +749,11 @@
             // 
             // buttonImages
             // 
-            //this.buttonImages.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("buttonImages.ImageStream")));
-            //this.buttonImages.TransparentColor = System.Drawing.Color.Transparent;
-            //this.buttonImages.Images.SetKeyName(0, "glyph-backg-normal.png");
-            //this.buttonImages.Images.SetKeyName(1, "glyph-backg-hover.png");
-            //this.buttonImages.Images.SetKeyName(2, "glyph-backg-pressed.png");
+            this.buttonImages.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("buttonImages.ImageStream")));
+            this.buttonImages.TransparentColor = System.Drawing.Color.Transparent;
+            this.buttonImages.Images.SetKeyName(0, "glyph-backg-normal.png");
+            this.buttonImages.Images.SetKeyName(1, "glyph-backg-hover.png");
+            this.buttonImages.Images.SetKeyName(2, "glyph-backg-pressed.png");
             // 
             // layoutControlGroup1
             // 
@@ -818,7 +818,6 @@
             this.lciTasks.Size = new System.Drawing.Size(289, 408);
             this.lciTasks.TextSize = new System.Drawing.Size(0, 0);
             this.lciTasks.TextVisible = false;
-            this.lciTasks.Visibility = DevExpress.XtraLayout.Utils.LayoutVisibility.Never;
             // 
             // layoutControlGroup2
             // 
@@ -891,6 +890,7 @@
             this.lciEvaluations.Size = new System.Drawing.Size(289, 408);
             this.lciEvaluations.TextSize = new System.Drawing.Size(0, 0);
             this.lciEvaluations.TextVisible = false;
+            this.lciEvaluations.Visibility = DevExpress.XtraLayout.Utils.LayoutVisibility.Never;
             // 
             // layoutControlItem1
             // 

@@ -1,4 +1,5 @@
-﻿namespace DevExpress.DevAV.Modules {
+﻿#if !DXCORE3
+namespace DevExpress.DevAV.Modules {
     partial class OrderMailMerge {
         /// <summary> 
         /// Required designer variable.
@@ -1157,3 +1158,4 @@
         private XtraSpellChecker.SpellChecker spellChecker1;
     }
 }
+#endif

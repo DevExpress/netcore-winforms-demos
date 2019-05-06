@@ -1,0 +1,147 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.0</TargetFramework>
+    <OutputType>Library</OutputType>
+    <EnableDefaultItems>false</EnableDefaultItems>
+    <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+    <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <SignAssembly>true</SignAssembly>
+    <Configurations>Debug;Release</Configurations>
+    <RootNamespace>DevExpress.DevAV.Reports</RootNamespace>
+    <AssemblyName>DevExpress.DevAV.v19.1.Reports</AssemblyName>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>..\..\bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>..\..\bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="Customers\CustomerContactsDirectory.cs" />
+    <Compile Include="Customers\CustomerLocationsDirectory.cs" />
+    <Compile Include="Customers\CustomerProfile.cs" />
+    <Compile Include="Customers\CustomerSalesDetail.cs" />
+    <Compile Include="Customers\CustomerSalesDetailReport.cs" />
+    <Compile Include="Customers\CustomerSalesSummary.cs" />
+    <Compile Include="Customers\CustomerSalesSummaryReport.cs" />
+    <Compile Include="Employees\EmployeeDirectory.cs" />
+    <Compile Include="Employees\EmployeeProfile.cs" />
+    <Compile Include="Employees\EmployeeSummary.cs" />
+    <Compile Include="Employees\EmployeeTaskList.cs" />
+    <Compile Include="EnumDisplayTextHelper.cs" />
+    <Compile Include="ParameterHelper.cs" />
+    <Compile Include="Products\ProductProfile.cs" />
+    <Compile Include="Products\ProductOrders.cs" />
+    <Compile Include="Products\ProductSalesSummary.cs" />
+    <Compile Include="Products\ProductTopSalesperson.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ReportFactory.cs" />
+    <Compile Include="ReportFinder.cs" />
+    <Compile Include="Sales\InvoiceHelper\CellsHelper.cs" />
+    <Compile Include="Sales\InvoiceHelper\Enums.cs" />
+    <Compile Include="Sales\InvoiceHelper\InvoiceHelper.cs" />
+    <Compile Include="Sales\InvoiceHelper\OrderPropertiesHelper.cs" />
+    <Compile Include="Sales\SalesAnalysis.cs" />
+    <Compile Include="Sales\SalesAnalysisReport.cs" />
+    <Compile Include="Sales\SalesInvoice.cs" />
+    <Compile Include="Sales\SalesOrdersSummary.cs" />
+    <Compile Include="Sales\SalesOrdersSummaryReport.cs" />
+    <Compile Include="Sales\SalesRevenueAnalysisReport.cs" />
+    <Compile Include="Sales\SalesRevenueReport.cs" />
+    <Compile Include="Tasks\TaskListReport.cs" />
+    <Compile Include="Tasks\TaskDetailReport.cs" />
+    <Compile Include="Shipping\FedExGroundLabel.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Images\droplet.png" />
+    <EmbeddedResource Include="Sales\SalesRevenueAnalysisReport.resx">
+      <DependentUpon>SalesRevenueAnalysisReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sales\SalesRevenueReport.resx">
+      <DependentUpon>SalesRevenueReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Shipping\FedExGroundLabel.resx">
+      <DependentUpon>FedExGroundLabel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Customers\CustomerContactsDirectory.resx">
+      <DependentUpon>CustomerContactsDirectory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Customers\CustomerLocationsDirectory.resx">
+      <DependentUpon>CustomerLocationsDirectory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Customers\CustomerProfile.resx">
+      <DependentUpon>CustomerProfile.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Customers\CustomerSalesDetail.resx">
+      <DependentUpon>CustomerSalesDetail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Customers\CustomerSalesDetailReport.resx">
+      <DependentUpon>CustomerSalesDetailReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Customers\CustomerSalesSummary.resx">
+      <DependentUpon>CustomerSalesSummary.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Customers\CustomerSalesSummaryReport.resx">
+      <DependentUpon>CustomerSalesSummaryReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Employees\EmployeeDirectory.resx">
+      <DependentUpon>EmployeeDirectory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Employees\EmployeeProfile.resx">
+      <DependentUpon>EmployeeProfile.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Employees\EmployeeSummary.resx">
+      <DependentUpon>EmployeeSummary.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Employees\EmployeeTaskList.resx">
+      <DependentUpon>EmployeeTaskList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Products\ProductProfile.resx">
+      <DependentUpon>ProductProfile.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Products\ProductOrders.resx">
+      <DependentUpon>ProductOrders.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Products\ProductSalesSummary.resx">
+      <DependentUpon>ProductSalesSummary.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Products\ProductTopSalesperson.resx">
+      <DependentUpon>ProductTopSalesperson.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sales\SalesAnalysis.resx">
+      <DependentUpon>SalesAnalysis.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sales\SalesAnalysisReport.resx">
+      <DependentUpon>SalesAnalysisReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sales\SalesInvoice.resx">
+      <DependentUpon>SalesInvoice.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sales\SalesOrdersSummary.resx">
+      <DependentUpon>SalesOrdersSummary.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sales\SalesOrdersSummaryReport.resx">
+      <DependentUpon>SalesOrdersSummaryReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tasks\TaskListReport.resx">
+      <DependentUpon>TaskListReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tasks\TaskDetailReport.resx">
+      <DependentUpon>TaskDetailReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sales\SalesInvoice.xltx" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="DevExpress.WindowsDesktop.Core" Version="19.1.3-pre-19126" />
+    <PackageReference Include="DevExpress.WindowsDesktop.Win" Version="19.1.3-pre-19126" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DevExpress.DevAV.Data\DevExpress.DevAV.Data.csproj" />
+  </ItemGroup>
+</Project>

@@ -33,7 +33,6 @@
             svgYes = SvgImage.FromResources("DevExpress.DevAV.Resources.EvaluationYes.svg", asm);
             svgNo = SvgImage.FromResources("DevExpress.DevAV.Resources.EvaluationNo.svg", asm);
             priorityImages = SVGHelper.CreateTaskPriorityImages(LookAndFeel, "DevExpress.DevAV.Resources.Tasks.");
-            buttonPanel.UseButtonBackgroundImages = false;
         }
 
         void OfficeTabFilter_SelectedItemChanged(object sender, XtraBars.Navigation.NavigationBarItemEventArgs e) {

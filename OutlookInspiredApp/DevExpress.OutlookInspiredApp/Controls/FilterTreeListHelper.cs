@@ -1,6 +1,6 @@
 ﻿namespace DevExpress.DevAV.Modules {
-    using DevExpress.Mvvm.DataModel;
     using DevExpress.DevAV.ViewModels;
+    using DevExpress.Mvvm.DataModel;
     using DevExpress.Utils.Menu;
     using DevExpress.XtraTreeList;
     using DevExpress.XtraTreeList.Nodes;

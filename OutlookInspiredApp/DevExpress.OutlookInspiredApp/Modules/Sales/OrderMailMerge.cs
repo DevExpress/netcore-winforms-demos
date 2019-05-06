@@ -1,4 +1,5 @@
-﻿namespace DevExpress.DevAV.Modules {
+﻿#if !DXCORE3
+namespace DevExpress.DevAV.Modules {
     using System;
     using System.IO;
     using DevExpress.DevAV.ViewModels;
@@ -117,10 +118,11 @@
         void ViewModel_Save(object sender, EventArgs e) {
             snapControl.SaveDocumentAs();
         }
-        #region
+#region
         XtraBars.Ribbon.RibbonControl IRibbonModule.Ribbon {
             get { return ribbonControl; }
         }
-        #endregion
+#endregion
     }
 }
+#endif

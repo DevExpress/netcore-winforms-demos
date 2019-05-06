@@ -9,6 +9,7 @@ namespace DevExpress.DevAV.ViewModels {
     using DevExpress.Mvvm;
     using DevExpress.Mvvm.DataAnnotations;
     using DevExpress.Mvvm.POCO;
+    using DevExpress.Mvvm.ViewModel;
 
     partial class OrderCollectionViewModel : ISupportMap, ISupportCustomFilters {
         public override void Refresh() {
@@ -81,7 +82,7 @@ namespace DevExpress.DevAV.ViewModels {
             return order != null;
         }
         public override void New() {
-            GetDocumentManagerService().ShowNewEntityDocument<Order>(this, newOrder => InitializeNewOrder(newOrder));
+            DocumentManagerService.ShowNewEntityDocument<Order>(this, newOrder => InitializeNewOrder(newOrder));
         }
         void InitializeNewOrder(Order order) {
             var unitOfWork = CreateUnitOfWork();

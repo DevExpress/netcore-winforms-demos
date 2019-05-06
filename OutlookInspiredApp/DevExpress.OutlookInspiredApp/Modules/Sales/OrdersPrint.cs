@@ -3,7 +3,7 @@
     using System.Collections.Generic;
     using System.Windows.Forms;
     using DevExpress.DevAV;
-    
+    using DevExpress.DevAV.Reports;
     using DevExpress.DevAV.ViewModels;
     using DevExpress.XtraPrinting;
     using DevExpress.XtraReports.Parameters;
@@ -75,6 +75,7 @@
             get { return GetParameter("paramToDate", typeof(DateTime)); }
         }
         void ViewModel_ReportEntityKeyChanged(object sender, EventArgs e) {
+            if(!(report is SalesInvoice)) return;
             UpdatePreview();
         }
         void ViewModel_ReportTypeChanged(object sender, System.EventArgs e) {

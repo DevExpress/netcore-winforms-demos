@@ -1,15 +1,10 @@
 using System;
 using System.Linq;
-using System.Linq.Expressions;
-using System.Collections.Generic;
-using System.Collections.ObjectModel;
-using DevExpress.Mvvm;
-using DevExpress.Mvvm.POCO;
-using DevExpress.DevAV.Common.Utils;
+using DevExpress.DevAV.Common.ViewModel;
 using DevExpress.DevAV.DevAVDbDataModel;
 using DevExpress.Mvvm.DataModel;
-using DevExpress.DevAV;
-using DevExpress.DevAV.Common.ViewModel;
+using DevExpress.Mvvm.POCO;
+using DevExpress.Mvvm.ViewModel;
 
 namespace DevExpress.DevAV.ViewModels {
     /// <summary>
@@ -38,7 +33,11 @@ namespace DevExpress.DevAV.ViewModels {
 		/// The view model that contains a look-up collection of Pictures for the corresponding navigation property in the view.
         /// </summary>
         public IEntitiesViewModel<Picture> LookUpPictures {
-            get { return GetLookUpEntitiesViewModel((EmployeeViewModel x) => x.LookUpPictures, x => x.Pictures); }
+            get {
+                return GetLookUpEntitiesViewModel<EmployeeViewModel, Picture, long>(
+                  propertyExpression: (EmployeeViewModel x) => x.LookUpPictures,
+                  getRepositoryFunc: x => x.Pictures);
+            }
         }
 
         /// <summary>
@@ -49,24 +48,29 @@ namespace DevExpress.DevAV.ViewModels {
         }
 
         /// <summary>
-        /// The view model for the EmployeeAssignedTasks detail collection.
-        /// </summary>
-        public CollectionViewModel<EmployeeTask, long, IDevAVDbUnitOfWork> EmployeeAssignedTasksDetails { 
-            get { return GetDetailsCollectionViewModel((EmployeeViewModel x) => x.EmployeeAssignedTasksDetails, x => x.Tasks, x => x.AssignedEmployeeId, (x, key) => x.AssignedEmployeeId = key); } 
-        }
-
-        /// <summary>
         /// The view model for the EmployeeOwnedTasks detail collection.
         /// </summary>
-        public CollectionViewModel<EmployeeTask, long, IDevAVDbUnitOfWork> EmployeeOwnedTasksDetails { 
-            get { return GetDetailsCollectionViewModel((EmployeeViewModel x) => x.EmployeeOwnedTasksDetails, x => x.Tasks, x => x.OwnerId, (x, key) => x.OwnerId = key); } 
+        public CollectionViewModelBase<EmployeeTask, EmployeeTask, long, IDevAVDbUnitOfWork> EmployeeOwnedTasksDetails {
+            get {
+                return GetDetailsCollectionViewModel<EmployeeViewModel, EmployeeTask, long, long?>(
+                    propertyExpression: (EmployeeViewModel x) => x.EmployeeOwnedTasksDetails,
+                    getRepositoryFunc: x => x.Tasks,
+                    foreignKeyExpression: x => x.OwnerId,
+                    navigationExpression: x => x.Owner);
+            }
         }
 
         /// <summary>
         /// The view model for the EmployeeEvaluations detail collection.
         /// </summary>
-        public CollectionViewModel<Evaluation, long, IDevAVDbUnitOfWork> EmployeeEvaluationsDetails { 
-            get { return GetDetailsCollectionViewModel((EmployeeViewModel x) => x.EmployeeEvaluationsDetails, x => x.Evaluations, x => x.EmployeeId, (x, key) => x.EmployeeId = key); } 
+        public CollectionViewModelBase<Evaluation, Evaluation, long, IDevAVDbUnitOfWork> EmployeeEvaluationsDetails {
+            get {
+                return GetDetailsCollectionViewModel<EmployeeViewModel, Evaluation, long, long?>(
+                    propertyExpression: (EmployeeViewModel x) => x.EmployeeEvaluationsDetails,
+                    getRepositoryFunc: x => x.Evaluations,
+                    foreignKeyExpression: x => x.EmployeeId,
+                    navigationExpression: x => x.Employee);
+            }
         }
     }
 }

@@ -4,7 +4,7 @@
     using System.Linq;
     using System.Windows.Forms;
     using DevExpress.DevAV;
-    
+    using DevExpress.DevAV.Reports;
     using DevExpress.DevAV.ViewModels;
     using DevExpress.XtraPrinting;
     using DevExpress.XtraReports.Parameters;
@@ -125,7 +125,7 @@
                     break;
                 case CustomerReportType.SalesDetail:
                     var orders = QueriesHelper.GetCustomerSaleDetails(CollectionViewModel.SelectedEntityKey, CollectionViewModel.GetOrderItems());
-                    //((CustomerSalesDetailReport)report).SetChartData(orders.SelectMany(x => x.OrderItems).ToArray());
+                    ((CustomerSalesDetailReport)report).SetChartData(orders.SelectMany(x => x.OrderItems).ToArray());
                     report.DataSource = orders;
                     break;
                 case CustomerReportType.Profile:

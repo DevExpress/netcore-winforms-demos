@@ -3,9 +3,10 @@ using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Linq.Expressions;
-using DevExpress.Mvvm.DataModel;
 using DevExpress.Mvvm;
 using DevExpress.Mvvm.DataAnnotations;
+using DevExpress.Mvvm.DataModel;
+using DevExpress.Mvvm.ViewModel;
 
 namespace DevExpress.DevAV.Common.ViewModel {
     partial class CollectionViewModel<TEntity, TPrimaryKey, TUnitOfWork> : ISupportParameter, IDocumentContent
@@ -43,9 +44,9 @@ namespace DevExpress.DevAV.Common.ViewModel {
             if(handler != null)
                 handler(this, new EntitiesCountEventArgs(count));
         }
-        [Command, Display(AutoGenerateField = false)]
-        public virtual void OnLoaded() {
+        public override void OnLoaded() {
             //SelectedEntity = Parameter == null ? Entities.FirstOrDefault() : FindEntity((TPrimaryKey)Parameter); // TODO
+            base.OnLoaded();
         }
         public event EventHandler SelectedEntityChanged; // move to descendand
         protected override void OnSelectedEntityChanged() {
@@ -78,7 +79,6 @@ namespace DevExpress.DevAV.Common.ViewModel {
             set { Parameter = value; }
         }
         #endregion
-        protected IDocumentManagerService DocumentManagerService { get { return GetDocumentManagerService(); } }
         protected IDocument FindDocument<TViewModel>() {
             if(DocumentManagerService == null) return null;
             return DocumentManagerService.Documents.FirstOrDefault(d => d.Content is TViewModel);

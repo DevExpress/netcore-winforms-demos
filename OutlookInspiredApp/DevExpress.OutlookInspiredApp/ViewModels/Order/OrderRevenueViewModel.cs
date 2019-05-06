@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.IO;
-
+using DevExpress.DevAV.Reports;
 using DevExpress.Mvvm;
 using DevExpress.Mvvm.POCO;
 using DevExpress.XtraReports.UI;
@@ -58,9 +58,8 @@ namespace DevExpress.DevAV.ViewModels {
             report.Parameters["paramOrderDate"].Value = true;
         }
         XtraReport CreateReport() {
-            return null;
-            //return Format == RevenueReportFormat.Summary ? ReportFactory.SalesRevenueReport(SelectedItems, true) :
-            //    ReportFactory.SalesRevenueAnalysisReport(SelectedItems, true);
+            return Format == RevenueReportFormat.Summary ? ReportFactory.SalesRevenueReport(SelectedItems, true) :
+                ReportFactory.SalesRevenueAnalysisReport(SelectedItems, true);
         }
         string CreateTitle() {
             return string.Format("{0}", Format == RevenueReportFormat.Analysis ? "Revenue Analysis" : "Revenue");

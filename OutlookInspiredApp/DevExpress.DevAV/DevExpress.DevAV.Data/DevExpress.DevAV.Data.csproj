@@ -1,0 +1,67 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.0</TargetFramework>
+    <OutputType>Library</OutputType>
+    <EnableDefaultItems>false</EnableDefaultItems>
+    <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+    <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <SignAssembly>true</SignAssembly>
+    <Configurations>Debug;DebugTest;Release;Debug;RemoteDebug</Configurations>
+    <RootNamespace>DevExpress.DevAV</RootNamespace>
+    <AssemblyName>DevExpress.DevAV.v19.1.Data</AssemblyName>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>..\..\bin\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;DEVAV;DXCORE3</DefineConstants>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>..\..\bin\</OutputPath>
+    <DefineConstants>TRACE;DEVAV;DXCORE3</DefineConstants>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="AttachedFile.cs" />
+    <Compile Include="Common\DataDirectoryHelper.cs" />
+    <Compile Include="Common\IDataErrorInfoHelper.cs" />
+    <Compile Include="Common\ValidationAttributes.cs" />
+    <Compile Include="Crest.cs" />
+    <Compile Include="CustomerComminication.cs" />
+    <Compile Include="CustomerStore.cs" />
+    <Compile Include="Evaluation.cs" />
+    <Compile Include="NetCore\Address.cs" />
+    <Compile Include="NetCore\DevAVDb.cs" />
+    <Compile Include="NetCore\ObservableObject.cs" />
+    <Compile Include="Order.cs" />
+    <Compile Include="OrderItem.cs" />
+    <Compile Include="Picture.cs" />
+    <Compile Include="Probation.cs" />
+    <Compile Include="ProductCatalog.cs" />
+    <Compile Include="ProductImage.cs" />
+    <Compile Include="Quote.cs" />
+    <Compile Include="QuoteItem.cs" />
+    <Compile Include="Queries.cs" />
+    <Compile Include="State.cs" />
+    <Compile Include="StateEnum.cs" />
+    <Compile Include="Customer.cs" />
+    <Compile Include="CustomerEmployee.cs" />
+    <Compile Include="DatabaseObject.cs" />
+    <Compile Include="Employee.cs" />
+    <Compile Include="Person.cs" />
+    <Compile Include="Product.cs" />
+    <Compile Include="Task.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Utils.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\Unknown-user.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="DevExpress.WindowsDesktop.Core" Version="19.1.3-pre-19126" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="3.0.0-preview3.19153.1" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Proxies" Version="3.0.0-preview3.19153.1" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="3.0.0-preview3.19153.1" />
+  </ItemGroup>
+</Project>
