@@ -2,10 +2,10 @@
  
 This repository contains the DevExpress demo applications that target .Net Core 3: 
 - Outlook-inspired 
-- Stock Market Trader.
+- Stock Market Trader
  
 ## System requirements
-- **Visual Studio 2019** with the **'.NET desktop development' workload** installed:
+- **Visual Studio 2019** with the **.NET desktop development** workload installed:
  
 - [.NET Core 3 SDK Preview 5 or more recent](https://dotnet.microsoft.com/download/dotnet-core/3.0)
  
@@ -25,7 +25,7 @@ https://developercommunity.visualstudio.com/content/problem/291761/couldnt-proce
  
 ## Integrate DevExpress WinForms Controls into a .NET Core 3 application
  
-You need DevExpress NuGet packages to create a .Net Core 3 project. Follow the steps below to add packages to a solution:
+You need the DevExpress NuGet packages to create a .Net Core 3 project. Follow the steps below to add the packages to a solution:
  
 1. Register the DevExpress Early Access feed in Visual Studio's NuGet Package Manager.
  
@@ -34,7 +34,7 @@ You need DevExpress NuGet packages to create a .Net Core 3 project. Follow the s
     See the [Setup Visual Studio's NuGet Package Manager](https://docs.devexpress.com/GeneralInformation/116698/installation/install-devexpress-controls-using-nuget-packages/setup-visual-studio%27s-nuget-package-manager) topic for more information.
  
 
-1. Install the **DevExpress.WindowsDesktop.Win** package for .Net Core 3 development. This package provides the DevExpress WinForms components.
+1. Install the **DevExpress.WindowsDesktop.Win** package (for .Net Core 3). 
  
 ## Feedback
  
