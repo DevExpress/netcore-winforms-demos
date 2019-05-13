@@ -27,14 +27,11 @@ https://developercommunity.visualstudio.com/content/problem/291761/couldnt-proce
  
 You need the DevExpress NuGet packages to create a .Net Core 3 project. Follow the steps below to add the packages to a solution:
  
-1. Register the DevExpress Early Access feed in Visual Studio's NuGet Package Manager.
+1. [Register](https://docs.devexpress.com/GeneralInformation/116698/installation/install-devexpress-controls-using-nuget-packages/setup-visual-studio%27s-nuget-package-manager) the DevExpress Early Access feed in Visual Studio's NuGet Package Manager.
  
     `https://nuget.devexpress.com/early-access/api`
  
-    See the [Setup Visual Studio's NuGet Package Manager](https://docs.devexpress.com/GeneralInformation/116698/installation/install-devexpress-controls-using-nuget-packages/setup-visual-studio%27s-nuget-package-manager) topic for more information.
- 
-
-1. Install the **DevExpress.WindowsDesktop.Win** package (for .Net Core 3). 
+2. Install the **DevExpress.WindowsDesktop.Win** package (for .Net Core 3). 
  
 ## Feedback
  
