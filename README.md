@@ -1,41 +1,25 @@
 # .Net Core 3 WinForms Demos
  
-This repository contains the Outlook-inspired and Stock Market Trader demo applications that support .Net Core 3.
+This repository contains the demo applications that target .Net Core 3: Outlook-inspired and Stock Market Trader
  
 ## System requirements
-1. **Visual Studio 2019 Preview 1** or **Visual Studio 2017 Update 15.8** with the following options installed:
+- **Visual Studio 2019** with the **'.NET desktop development' workload** installed:
  
-    1. **.NET Framework 4.7.2 development tools**
- 
-    1. **.NET Core 2.1 development tools**
- 
-1. [.NET Core 3 SDK](https://dotnet.microsoft.com/download/dotnet-core/3.0)
+- [.NET Core 3 SDK Preview 5 or more recent](https://dotnet.microsoft.com/download/dotnet-core/3.0)
  
  
 
 ## How to run the demos
- 
-### Stock Market Trader Demo
- 
-Open the following project in Visual Studio to see this demo :
- 
-`\StockMarketTraderApp\Devexpress.StockMarketTrader.csproj`
- 
-To run the demo in the console, navigate to the project's folder (`\StockMarketTraderApp\`) and call the following command:
- 
-`dotnet run Devexpress.StockMarketTrader`
- 
-### Outlook-inspired Demo
- 
-To run this demo, open the solution in Visual Studio and build the solution.
- 
-`\OutlookInspiredApp\DevExpress.OutlookInspiredApp.sln`
- 
-To build the demo in the console, navigate to the solution's folder (`\OutlookInspiredApp`) and call the following command:
- 
-`dotnet build DevExpress.OutlookInspiredApp.sln`
- 
-Navigate to the `bin` folder and run the demo (`.\DevExpress.OutlookInspiredApp.Win.exe`).
+
+Open the solution in Visual Studio. 
+Before you build the solution, ensure the 'Use previews of the .NET Core SDK' option is enabled (Tools->Options->Project and Solutions->.NET Core).
+
+If you download the solution as a .zip file, you may encounter the following error:
+
+MSB3821	Couldn't process file Modules\* * .resx due to its being in the Internet or Restricted zone or having the mark of the web on the file. Remove the mark of the web if you want to process these files.
+
+See the following link to learn how to resolve this issue:
+https://developercommunity.visualstudio.com/content/problem/291761/couldnt-process-file-abcresx-due-to-its-being-in-t.html
  
 ## How to integrate DevExpress WinForms Controls into a .NET Core 3 application
  
@@ -56,4 +40,4 @@ You can provide feedback via [DevExpress Support Center](https://www.devexpress.
  
 ## See Also
  
-See the [.NET Core 3.0 Windows Forms Samples](https://github.com/dotnet/samples/tree/master/windowsforms) repository for more examples.
+[.NET Core 3.0 Windows Forms Samples](https://github.com/dotnet/samples/tree/master/windowsforms)
