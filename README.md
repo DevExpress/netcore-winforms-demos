@@ -1,6 +1,8 @@
 # .Net Core 3 WinForms Demos
  
-This repository contains the demo applications that target .Net Core 3: Outlook-inspired and Stock Market Trader
+This repository contains the DevExpress demo applications that target .Net Core 3: 
+- Outlook-inspired 
+- Stock Market Trader.
  
 ## System requirements
 - **Visual Studio 2019** with the **'.NET desktop development' workload** installed:
@@ -12,11 +14,11 @@ This repository contains the demo applications that target .Net Core 3: Outlook-
 ## Run the demos
 
 Open the solution in Visual Studio. 
-Before you build the solution, ensure the 'Use previews of the .NET Core SDK' option is enabled (Tools->Options->Project and Solutions->.NET Core).
+Before you build the solution, ensure the 'Use previews of the .NET Core SDK' option is enabled (find this option from the Visual Studio main menu: Tools->Options->Project and Solutions->.NET Core).
 
-If you download the solution as a .zip file, you may encounter the following error:
+If you download the solution as a .zip file, you may encounter the following error when you build the solution:
 
-`MSB3821	Couldn't process file Modules\* * .resx due to its being in the Internet or Restricted zone or having the mark of the web on the file. Remove the mark of the web if you want to process these files.`
+`MSB3821	Couldn't process file Modules\`<code>&ast;</code>``<code>&ast;</code>`.resx due to its being in the Internet or Restricted zone or having the mark of the web on the file. Remove the mark of the web if you want to process these files.`
 
 See the following link to learn how to resolve this issue:
 https://developercommunity.visualstudio.com/content/problem/291761/couldnt-process-file-abcresx-due-to-its-being-in-t.html
