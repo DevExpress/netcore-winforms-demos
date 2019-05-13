@@ -9,19 +9,19 @@ This repository contains the demo applications that target .Net Core 3: Outlook-
  
  
 
-## How to run the demos
+## Run the demos
 
 Open the solution in Visual Studio. 
 Before you build the solution, ensure the 'Use previews of the .NET Core SDK' option is enabled (Tools->Options->Project and Solutions->.NET Core).
 
 If you download the solution as a .zip file, you may encounter the following error:
 
-MSB3821	Couldn't process file Modules\* * .resx due to its being in the Internet or Restricted zone or having the mark of the web on the file. Remove the mark of the web if you want to process these files.
+`MSB3821	Couldn't process file Modules\* * .resx due to its being in the Internet or Restricted zone or having the mark of the web on the file. Remove the mark of the web if you want to process these files.`
 
 See the following link to learn how to resolve this issue:
 https://developercommunity.visualstudio.com/content/problem/291761/couldnt-process-file-abcresx-due-to-its-being-in-t.html
  
-## How to integrate DevExpress WinForms Controls into a .NET Core 3 application
+## Integrate DevExpress WinForms Controls into a .NET Core 3 application
  
 You need DevExpress NuGet packages to create a .Net Core 3 project. Follow the steps below to add packages to a solution:
  
