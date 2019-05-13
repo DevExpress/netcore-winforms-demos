@@ -18,7 +18,7 @@ Before you build the solution, ensure the 'Use previews of the .NET Core SDK' op
 
 If you download the solution as a .zip file, you may encounter the following error when you build the solution:
 
-`MSB3821	Couldn't process file Modules\\*.resx due to its being in the Internet or Restricted zone or having the mark of the web on the file. Remove the mark of the web if you want to process these files.`
+`MSB3821	Couldn't process file *.resx due to its being in the Internet or Restricted zone or having the mark of the web on the file. Remove the mark of the web if you want to process these files.`
 
 See the following link to learn how to resolve this issue:
 https://developercommunity.visualstudio.com/content/problem/291761/couldnt-process-file-abcresx-due-to-its-being-in-t.html
