@@ -14,7 +14,7 @@ This repository contains the DevExpress demo applications that target .Net Core 
 ## Run the demos
 
 Open the solution in Visual Studio. 
-Before you build the solution, ensure the 'Use previews of the .NET Core SDK' option is enabled (find this option from the Visual Studio main menu: Tools->Options->Project and Solutions->.NET Core).
+Before you build the solution, ensure that the 'Use previews of the .NET Core SDK' option is enabled (find this option from the Visual Studio main menu: Tools->Options->Project and Solutions->.NET Core).
 
 If you downloaded the solution as a .zip file, you may encounter the following error when you build the solution:
 
