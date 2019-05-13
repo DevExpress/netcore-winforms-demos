@@ -1,4 +1,4 @@
-# .Net Core 3 WinForms Demos
+# .Net Core 3 DevExpress WinForms Demos
  
 This repository contains the DevExpress demo applications that target .Net Core 3: 
 - Outlook-inspired App
