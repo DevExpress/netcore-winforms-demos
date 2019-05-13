@@ -10,7 +10,7 @@
     <SccAuxPath>SAK</SccAuxPath>
     <SccProvider>SAK</SccProvider>
     <SignAssembly>true</SignAssembly>
-    <Configurations>Debug;DebugTest;Release;Debug;RemoteDebug</Configurations>
+    <Configurations>Debug;Release</Configurations>
     <RootNamespace>DevExpress.DevAV</RootNamespace>
     <AssemblyName>DevExpress.DevAV.v19.1.Data</AssemblyName>
   </PropertyGroup>
@@ -59,7 +59,7 @@
     <EmbeddedResource Include="Resources\Unknown-user.png" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="DevExpress.WindowsDesktop.Core" Version="19.1.3-pre-19126" />
+    <PackageReference Include="DevExpress.WindowsDesktop.Core" Version="19.1.3" />
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="3.0.0-preview3.19153.1" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Proxies" Version="3.0.0-preview3.19153.1" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="3.0.0-preview3.19153.1" />

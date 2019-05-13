@@ -60,7 +60,7 @@
             ribbonControl.ApplicationDocumentCaption = customer.Name;
         }
         void UpdateChart(DevAV.MapItem salesItem) {
-            chart.Series[0].Colorizer = colorizer1;
+            chart.Series[0].View.Colorizer = colorizer1;
             chart.DataSource = ViewModel.GetSalesByCity(salesItem.City, ViewModel.Period).ToList();
         }
         void UpdateColors() {

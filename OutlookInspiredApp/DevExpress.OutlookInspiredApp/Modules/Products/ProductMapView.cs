@@ -61,7 +61,7 @@
             ribbonControl.ApplicationDocumentCaption = product.Name;
         }
         void UpdateChart(DevAV.MapItem salesItem) {
-            chart.Series[0].Colorizer = keyColorColorizer as DevExpress.XtraCharts.IColorizer;
+            chart.Series[0].View.Colorizer = keyColorColorizer as DevExpress.XtraCharts.IColorizer;
             chart.DataSource = ViewModel.GetSalesByCity(salesItem.City, ViewModel.Period).ToList();
         }
         void UpdateColors() {
