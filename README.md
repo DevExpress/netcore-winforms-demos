@@ -17,7 +17,7 @@ This repository contains the Outlook-inspired and Stock Market Trader demo appli
  
 ### Stock Market Trader Demo
  
-Open the following project in Visual Studio to see this demo:
+Open the following project in Visual Studio to see this demo :
  
 `\StockMarketTraderApp\Devexpress.StockMarketTrader.csproj`
  
