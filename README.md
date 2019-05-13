@@ -16,7 +16,7 @@ This repository contains the DevExpress demo applications that target .Net Core 
 Open the solution in Visual Studio. 
 Before you build the solution, ensure the 'Use previews of the .NET Core SDK' option is enabled (find this option from the Visual Studio main menu: Tools->Options->Project and Solutions->.NET Core).
 
-If you download the solution as a .zip file, you may encounter the following error when you build the solution:
+If you downloaded the solution as a .zip file, you may encounter the following error when you build the solution:
 
 `MSB3821	Couldn't process file *.resx due to its being in the Internet or Restricted zone or having the mark of the web on the file. Remove the mark of the web if you want to process these files.`
 
