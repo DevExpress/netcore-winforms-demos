@@ -5,7 +5,7 @@ This repository contains the DevExpress demo applications that target .Net Core 
 - Stock Market Trader
  
 ## System requirements
-- **Visual Studio 2019** with the **.NET desktop development** workload installed:
+- **Visual Studio 2019** with the **.NET desktop development** workload installed
  
 - [.NET Core 3 SDK Preview 5 or more recent](https://dotnet.microsoft.com/download/dotnet-core/3.0)
  
