@@ -123,7 +123,7 @@ namespace DevExpress.DevAV {
             moduleControl.Parent = modulesContainer;
             navBar.SendToBack();
             modulesContainer.ResumeLayout();
-            Text = string.Format("{1} - {0}", ViewModel.GetModuleCaption(ViewModel.SelectedModuleType), "DevAV");
+            Text = string.Format("{1} - {0}", ViewModel.GetModuleCaption(ViewModel.SelectedModuleType), "DevAV (.Net Core 3.0)");
             IRibbonModule ribbonModuleControl = moduleControl as IRibbonModule;
             if(ribbonModuleControl != null) {
                 Ribbon.MergeRibbon(ribbonModuleControl.Ribbon);
