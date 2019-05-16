@@ -10,6 +10,7 @@ using DevExpress.DevAV.DevAVDbDataModel;
 using DevExpress.Mvvm.DataModel;
 using DevExpress.DevAV;
 using DevExpress.DevAV.Common.ViewModel;
+using DevExpress.Mvvm.ViewModel;
 
 namespace DevExpress.DevAV.ViewModels {
     /// <summary>
@@ -51,22 +52,40 @@ namespace DevExpress.DevAV.ViewModels {
         /// <summary>
         /// The view model for the ProductCatalog detail collection.
         /// </summary>
-        public CollectionViewModel<ProductCatalog, long, IDevAVDbUnitOfWork> ProductCatalogDetails { 
-            get { return GetDetailsCollectionViewModel((ProductViewModel x) => x.ProductCatalogDetails, x => x.ProductCatalogs, x => x.ProductId, (x, key) => x.ProductId = key); } 
+        public CollectionViewModelBase<ProductCatalog, ProductCatalog, long, IDevAVDbUnitOfWork> ProductCatalogDetails {
+            get {
+                return GetDetailsCollectionViewModel<ProductViewModel, ProductCatalog, long, long?>(
+                    propertyExpression: (ProductViewModel x) => x.ProductCatalogDetails,
+                    getRepositoryFunc: x => x.ProductCatalogs,
+                    foreignKeyExpression: x => x.ProductId,
+                    navigationExpression: x => x.Product);
+            }
         }
 
         /// <summary>
         /// The view model for the ProductOrderItems detail collection.
         /// </summary>
-        public CollectionViewModel<OrderItem, long, IDevAVDbUnitOfWork> ProductOrderItemsDetails { 
-            get { return GetDetailsCollectionViewModel((ProductViewModel x) => x.ProductOrderItemsDetails, x => x.OrderItems, x => x.ProductId, (x, key) => x.ProductId = key); } 
+        public CollectionViewModelBase<OrderItem, OrderItem, long, IDevAVDbUnitOfWork> ProductOrderItemsDetails {
+            get {
+                return GetDetailsCollectionViewModel<ProductViewModel, OrderItem, long, long?>(
+                    propertyExpression: (ProductViewModel x) => x.ProductOrderItemsDetails,
+                    getRepositoryFunc: x => x.OrderItems,
+                    foreignKeyExpression: x => x.ProductId,
+                    navigationExpression: x => x.Product);
+            }
         }
 
         /// <summary>
         /// The view model for the ProductImages detail collection.
         /// </summary>
-        public CollectionViewModel<ProductImage, long, IDevAVDbUnitOfWork> ProductImagesDetails { 
-            get { return GetDetailsCollectionViewModel((ProductViewModel x) => x.ProductImagesDetails, x => x.ProductImages, x => x.ProductId, (x, key) => x.ProductId = key); } 
+        public CollectionViewModelBase<ProductImage, ProductImage, long, IDevAVDbUnitOfWork> ProductImagesDetails {
+            get {
+                return GetDetailsCollectionViewModel<ProductViewModel, ProductImage, long, long?>(
+                    propertyExpression: (ProductViewModel x) => x.ProductImagesDetails,
+                    getRepositoryFunc: x => x.ProductImages,
+                    foreignKeyExpression: x => x.ProductId,
+                    navigationExpression: x => x.Product);
+            }
         }
     }
 }

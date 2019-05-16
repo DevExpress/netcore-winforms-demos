@@ -111,6 +111,8 @@
             this.winExplorerView.Appearance.ItemNormal.Options.UseFont = true;
             this.winExplorerView.Appearance.ItemPressed.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.winExplorerView.Appearance.ItemPressed.Options.UseFont = true;
+            this.winExplorerView.Appearance.ItemSelected.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.winExplorerView.Appearance.ItemSelected.Options.UseFont = true;
             this.winExplorerView.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
             this.winExplorerView.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
             this.colImage,

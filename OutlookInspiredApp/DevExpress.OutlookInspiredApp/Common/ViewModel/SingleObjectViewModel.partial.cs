@@ -1,11 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Windows;
 using DevExpress.Mvvm;
-using DevExpress.Mvvm.DataAnnotations;
-using DevExpress.Mvvm.POCO;
 using DevExpress.Mvvm.DataModel;
+using DevExpress.Mvvm.ViewModel;
 
 namespace DevExpress.DevAV.Common.ViewModel {
     partial class SingleObjectViewModel<TEntity, TPrimaryKey, TUnitOfWork>

@@ -24,8 +24,6 @@
             InitViewKind();
             InitViewLayout();
             InitEditors();
-            //NetCore3
-            biPrintSubItem.Enabled = false;
         }
         protected override void OnDisposing() {
             CollectionPresenter.Dispose();

@@ -10,6 +10,7 @@ using DevExpress.DevAV.DevAVDbDataModel;
 using DevExpress.Mvvm.DataModel;
 using DevExpress.DevAV;
 using DevExpress.DevAV.Common.ViewModel;
+using DevExpress.Mvvm.ViewModel;
 
 namespace DevExpress.DevAV.ViewModels {
     /// <summary>
@@ -55,11 +56,11 @@ namespace DevExpress.DevAV.ViewModels {
             get { return GetLookUpEntitiesViewModel((OrderViewModel x) => x.LookUpEmployees, x => x.Employees); }
         }
 
-        /// <summary>
-        /// The view model for the OrderOrderItems detail collection.
-        /// </summary>
-        public CollectionViewModel<OrderItem, long, IDevAVDbUnitOfWork> OrderOrderItemsDetails { 
-            get { return GetDetailsCollectionViewModel((OrderViewModel x) => x.OrderOrderItemsDetails, x => x.OrderItems, x => x.OrderId, (x, key) => x.OrderId = key); } 
-        }
+        ///// <summary>
+        ///// The view model for the OrderOrderItems detail collection.
+        ///// </summary>
+        //public CollectionViewModel<OrderItem, long, IDevAVDbUnitOfWork> OrderOrderItemsDetails { 
+        //    get { return GetDetailsCollectionViewModel((OrderViewModel x) => x.OrderOrderItemsDetails, x => x.OrderItems, x => x.OrderId, (x, key) => x.OrderId = key); } 
+        //}
     }
 }

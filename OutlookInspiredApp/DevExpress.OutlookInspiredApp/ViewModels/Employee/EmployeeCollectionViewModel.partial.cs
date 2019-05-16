@@ -3,6 +3,7 @@ namespace DevExpress.DevAV.ViewModels {
     using System.Collections.Generic;
     using System.Linq;
     using DevExpress.DevAV;
+    using DevExpress.Mvvm;
     using DevExpress.Mvvm.DataAnnotations;
     using DevExpress.Mvvm.POCO;
 
@@ -108,7 +109,7 @@ namespace DevExpress.DevAV.ViewModels {
         }
         [Command(UseCommandManager = false, CanExecuteMethodName = "CanPrintProfile")]
         public void MailMerge() {
-            ShowDocument<EmployeeMailMergeViewModel>("MailMerge", null);
+            //ShowDocument<EmployeeMailMergeViewModel>("MailMerge", null);
         }
         [Command]
         public void QuickLetter(EmployeeMailTemplate mailTemplate) {
@@ -118,7 +119,7 @@ namespace DevExpress.DevAV.ViewModels {
             return CanQuickLetterCore(SelectedEntity, mailTemplate);
         }
         protected internal void QuickLetterCore(Employee employee, EmployeeMailTemplate mailTemplate) {
-            ShowDocument<EmployeeMailMergeViewModel>("MailMerge", mailTemplate);
+            //ShowDocument<EmployeeMailMergeViewModel>("MailMerge", mailTemplate);
         }
         protected internal bool CanQuickLetterCore(Employee employee, EmployeeMailTemplate mailTemplate) {
             return employee != null;

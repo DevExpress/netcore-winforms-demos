@@ -745,8 +745,8 @@
             this.biShowList.Caption = "List";
             this.biShowList.GroupIndex = 1;
             this.biShowList.Id = 4;
-            this.biShowList.ImageOptions.ImageUri.ResourceType = typeof(DevExpress.DevAV.MainForm);
-            this.biShowList.ImageOptions.ImageUri.Uri = "resource://DevExpress.DevAV.Resources.List.svg";
+            this.biShowList.ImageOptions.AllowGlyphSkinning = DevExpress.Utils.DefaultBoolean.False;
+            this.biShowList.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("biShowList.ImageOptions.SvgImage")));
             this.biShowList.Name = "biShowList";
             // 
             // biMap
@@ -985,8 +985,8 @@
             this.biShowMasterDetail.Caption = "Detail";
             this.biShowMasterDetail.GroupIndex = 1;
             this.biShowMasterDetail.Id = 11;
-            this.biShowMasterDetail.ImageOptions.ImageUri.ResourceType = typeof(DevExpress.DevAV.MainForm);
-            this.biShowMasterDetail.ImageOptions.ImageUri.Uri = "resource://DevExpress.DevAV.Resources.Detailed.svg";
+            this.biShowMasterDetail.ImageOptions.AllowGlyphSkinning = DevExpress.Utils.DefaultBoolean.False;
+            this.biShowMasterDetail.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("biShowMasterDetail.ImageOptions.SvgImage")));
             this.biShowMasterDetail.Name = "biShowMasterDetail";
             // 
             // biShowCard

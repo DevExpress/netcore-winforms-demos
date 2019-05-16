@@ -4,7 +4,7 @@
     using System.IO;
     using DevExpress.DevAV;
     using DevExpress.DevAV.Presenters;
-    
+    using DevExpress.DevAV.Reports;
     using DevExpress.DevAV.ViewModels;
     using DevExpress.Pdf;
 
@@ -65,8 +65,8 @@
         }
         static Stream GetShipmentTemplate(Order order) {
             MemoryStream pdfStream = new MemoryStream();
-            //var report = ReportFactory.ShippingDetail(order);
-            //report.ExportToPdf(pdfStream);
+            var report = ReportFactory.ShippingDetail(order);
+            report.ExportToPdf(pdfStream);
             return pdfStream;
         }
         static string GetWatermarkText(Order order) {

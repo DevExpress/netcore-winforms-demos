@@ -1,4 +1,5 @@
-﻿namespace DevExpress.DevAV.Modules {
+﻿#if !DXCORE3
+namespace DevExpress.DevAV.Modules {
     partial class EmployeeMailMerge {
         /// <summary> 
         /// Required designer variable.
@@ -217,7 +218,7 @@
             // 
             // stylesRibbonPageGroup1
             // 
-            //this.stylesRibbonPageGroup1.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("stylesRibbonPageGroup1.ImageOptions.Image")));
+            this.stylesRibbonPageGroup1.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("stylesRibbonPageGroup1.ImageOptions.Image")));
             this.stylesRibbonPageGroup1.ItemLinks.Add(this.galleryChangeStyleItem1);
             this.stylesRibbonPageGroup1.Name = "stylesRibbonPageGroup1";
             // 
@@ -934,13 +935,13 @@
             // repositoryItemMailMergeCurrentRecordEdit1
             // 
             this.repositoryItemMailMergeCurrentRecordEdit1.AutoHeight = false;
-            //editorButtonImageOptions1.Image = ((System.Drawing.Image)(resources.GetObject("editorButtonImageOptions1.Image")));
+            editorButtonImageOptions1.Image = ((System.Drawing.Image)(resources.GetObject("editorButtonImageOptions1.Image")));
             editorButtonImageOptions1.Location = DevExpress.XtraEditors.ImageLocation.MiddleLeft;
-            //editorButtonImageOptions2.Image = ((System.Drawing.Image)(resources.GetObject("editorButtonImageOptions2.Image")));
+            editorButtonImageOptions2.Image = ((System.Drawing.Image)(resources.GetObject("editorButtonImageOptions2.Image")));
             editorButtonImageOptions2.Location = DevExpress.XtraEditors.ImageLocation.MiddleRight;
-            //editorButtonImageOptions3.Image = ((System.Drawing.Image)(resources.GetObject("editorButtonImageOptions3.Image")));
+            editorButtonImageOptions3.Image = ((System.Drawing.Image)(resources.GetObject("editorButtonImageOptions3.Image")));
             editorButtonImageOptions3.Location = DevExpress.XtraEditors.ImageLocation.MiddleLeft;
-            //editorButtonImageOptions4.Image = ((System.Drawing.Image)(resources.GetObject("editorButtonImageOptions4.Image")));
+            editorButtonImageOptions4.Image = ((System.Drawing.Image)(resources.GetObject("editorButtonImageOptions4.Image")));
             editorButtonImageOptions4.Location = DevExpress.XtraEditors.ImageLocation.MiddleRight;
             this.repositoryItemMailMergeCurrentRecordEdit1.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", 6, true, true, true, editorButtonImageOptions1, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject1, serializableAppearanceObject2, serializableAppearanceObject3, serializableAppearanceObject4, "Previous", DevExpress.Snap.Extensions.UI.MailMergeCurrentRecordEditorButtonTag.Prev, null, DevExpress.Utils.ToolTipAnchor.Default),
@@ -1641,3 +1642,4 @@
         private XtraSpellChecker.SpellChecker spellChecker1;
     }
 }
+#endif

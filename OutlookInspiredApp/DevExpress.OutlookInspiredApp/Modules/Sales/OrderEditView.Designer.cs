@@ -574,8 +574,8 @@
             this.spreadsheetControl1.Location = new System.Drawing.Point(0, 141);
             this.spreadsheetControl1.MenuManager = this.ribbonControl;
             this.spreadsheetControl1.Name = "spreadsheetControl1";
-            this.spreadsheetControl1.Options.Import.Csv.Encoding = ((System.Text.Encoding)(resources.GetObject("spreadsheetControl1.Options.Import.Csv.Encoding")));
-            this.spreadsheetControl1.Options.Import.Txt.Encoding = ((System.Text.Encoding)(resources.GetObject("spreadsheetControl1.Options.Import.Txt.Encoding")));
+            //this.spreadsheetControl1.Options.Import.Csv.Encoding = ((System.Text.Encoding)(resources.GetObject("spreadsheetControl1.Options.Import.Csv.Encoding")));
+            //this.spreadsheetControl1.Options.Import.Txt.Encoding = ((System.Text.Encoding)(resources.GetObject("spreadsheetControl1.Options.Import.Txt.Encoding")));
             this.spreadsheetControl1.Options.View.ShowColumnHeaders = false;
             this.spreadsheetControl1.Options.View.ShowPrintArea = false;
             this.spreadsheetControl1.Options.View.ShowRowHeaders = false;

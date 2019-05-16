@@ -123,7 +123,7 @@ namespace DevExpress.DevAV {
             moduleControl.Parent = modulesContainer;
             navBar.SendToBack();
             modulesContainer.ResumeLayout();
-            Text = string.Format("{1} - {0} (.Net Core 3.0)", ViewModel.GetModuleCaption(ViewModel.SelectedModuleType), "DevAV");
+            Text = string.Format("{1} - {0}", ViewModel.GetModuleCaption(ViewModel.SelectedModuleType), "DevAV (.Net Core 3.0)");
             IRibbonModule ribbonModuleControl = moduleControl as IRibbonModule;
             if(ribbonModuleControl != null) {
                 Ribbon.MergeRibbon(ribbonModuleControl.Ribbon);
@@ -175,8 +175,8 @@ namespace DevExpress.DevAV {
             ribbonControl.ShowApplicationButtonContentControl();
         }
         void backstageViewControl_Shown(object sender, EventArgs e) {
-            tabBackstageViewExport.Enabled = false;
-            tabBackstageViewPrint.Enabled = false;
+            tabBackstageViewExport.Enabled = ViewModel.SelectedExportModuleType != ModuleType.QuotesExport;
+            tabBackstageViewPrint.Enabled = ViewModel.SelectedPrintModuleType != ModuleType.QuotesPrint;
         }
         void backstageViewControl_Hidden(object sender, EventArgs e) {
             if(backstageViewControl.SelectedTab != tabBackstageViewAbout)
@@ -515,7 +515,7 @@ namespace DevExpress.DevAV {
             OnNotificationClick(e.NotificationID);
         }
         bool CanUseToastNotifications() {
-            return false;
+            return DevExpress.XtraBars.ToastNotifications.ToastNotificationsManager.AreToastNotificationsSupported;
         }
         void ShowNotification(int index) {
             var notification = notificationManager.Notifications[index];
@@ -540,13 +540,19 @@ namespace DevExpress.DevAV {
                 ViewModel.SelectedModuleType = ModuleType.Orders;
             }
             if(notificationID == notificationManager.Notifications[1].ID) {
-                ViewModel.SelectedModuleType = ModuleType.CustomerMapView;
+                ISupportMap supportMap = ViewModel.SelectedModuleViewModel as ISupportMap;
+                if(supportMap != null && supportMap.CanShowMap())
+                    supportMap.ShowMap();
             }
             if(notificationID == notificationManager.Notifications[2].ID) {
                 ViewModel.SelectedModuleType = ModuleType.Products;
             }
             if(notificationID == notificationManager.Notifications[3].ID) {
-                ViewModel.SelectedModuleType = ModuleType.Customers;
+                if(!(ViewModel.SelectedModuleViewModel is ISupportAnalysis))
+                    ViewModel.SelectedModuleType = ModuleType.Customers;
+                ISupportAnalysis supportAnalysis = ViewModel.SelectedModuleViewModel as ISupportAnalysis;
+                if(supportAnalysis != null) 
+                    supportAnalysis.ShowAnalysis();
             }
         }
         #endregion Notifications

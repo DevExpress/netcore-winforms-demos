@@ -36,25 +36,13 @@ namespace DevExpress.DevAV {
                 e.Appearance.Font = FontResources.GetFont(e.Appearance.Font.FontFamily.Name, rowFontSize, e.Appearance.Font.Style);
                 if(e.RowHandle == FocusedRowHandle && GridControl.Focused)
                     e.Appearance.BackColor = PaintAppearance.FocusedRow.BackColor;
-                else SetEvenRowAppearance(e.Appearance, e.RowHandle);
             };
             this.CustomDrawRowPreview += (s, e) => {
                 if(e.RowHandle == FocusedRowHandle && GridControl.Focused) {
                     e.Appearance.BackColor = PaintAppearance.FocusedRow.BackColor;
                     e.Appearance.ForeColor = PaintAppearance.FocusedRow.ForeColor;
                 }
-                else SetEvenRowAppearance(e.Appearance, e.RowHandle);
             };
-        }
-        void SetEvenRowAppearance(AppearanceObject appearance, int rowHandle) {
-            if(rowHandle % 2 == 0) {
-                appearance.BackColor = PaintAppearance.EvenRow.BackColor;
-                appearance.ForeColor = PaintAppearance.EvenRow.ForeColor;
-            }
-            else {
-                appearance.BackColor = PaintAppearance.Row.BackColor;
-                appearance.ForeColor = PaintAppearance.Row.ForeColor;
-            }
         }
         public void SetViewFontSize(float rowFontSize, float previewFontSize) {
             if(previewFontSize > 0)
@@ -200,6 +188,8 @@ namespace DevExpress.DevAV {
             winExplorerView.Appearance.ItemDescriptionHovered.Options.UseForeColor = true;
             winExplorerView.Appearance.ItemDescriptionPressed.ForeColor = ColorHelper.DisabledTextColor;
             winExplorerView.Appearance.ItemDescriptionPressed.Options.UseForeColor = true;
+            winExplorerView.Appearance.ItemDescriptionSelected.ForeColor = ColorHelper.DisabledTextColor;
+            winExplorerView.Appearance.ItemDescriptionSelected.Options.UseForeColor = true;
         }
     }
     //
@@ -209,11 +199,7 @@ namespace DevExpress.DevAV {
         }
         public static void ProcessStart(string name, string arguments) {
             try {
-                System.Diagnostics.Process process = new System.Diagnostics.Process();
-                process.StartInfo.FileName = "cmd";
-                process.StartInfo.Arguments = $"/c start {name}";
-                process.StartInfo.CreateNoWindow = true;
-                process.Start();
+                Data.Utils.SafeProcess.Open(name, arguments);
             }
             catch(System.ComponentModel.Win32Exception) { }
         }

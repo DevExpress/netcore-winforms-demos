@@ -1,7 +1,7 @@
 ﻿namespace DevExpress.DevAV.ViewModels {
     using DevExpress.DevAV;
     using DevExpress.DevAV.DevAVDbDataModel;
-    
+    using DevExpress.DevAV.Reports;
     using DevExpress.Mvvm;
     using System;
     using System.ComponentModel;
@@ -26,18 +26,18 @@
         }
         public void LoadDocument(Order order) {
             var documentStream = new MemoryStream();
-            //var report = ReportFactory.SalesInvoice(order, true, false, false, false);
-            //switch(Format) {
-            //    case ReportFormat.Pdf:
-            //        report.ExportToPdf(documentStream);
-            //        break;
-            //    case ReportFormat.Xls:
-            //        report.ExportToXls(documentStream);
-            //        break;
-            //    case ReportFormat.Doc:
-            //        report.ExportToRtf(documentStream, new XtraPrinting.RtfExportOptions() { ExportMode = XtraPrinting.RtfExportMode.SingleFilePageByPage });
-            //        break;
-            //}
+            var report = ReportFactory.SalesInvoice(order, true, false, false, false);
+            switch(Format) {
+                case ReportFormat.Pdf:
+                    report.ExportToPdf(documentStream);
+                    break;
+                case ReportFormat.Xls:
+                    report.ExportToXls(documentStream);
+                    break;
+                case ReportFormat.Doc:
+                    report.ExportToRtf(documentStream, new XtraPrinting.RtfExportOptions() { ExportMode = XtraPrinting.RtfExportMode.SingleFilePageByPage });
+                    break;
+            }
             DocumentStream = documentStream;
             DocumentStream.Seek(0, SeekOrigin.Begin);
         }

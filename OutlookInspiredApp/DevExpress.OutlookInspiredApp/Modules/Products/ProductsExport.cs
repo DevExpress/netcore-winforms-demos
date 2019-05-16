@@ -3,7 +3,7 @@
     using System.Collections.Generic;
     using System.Windows.Forms;
     using DevExpress.DevAV;
-    
+    using DevExpress.DevAV.Reports;
     using DevExpress.DevAV.ViewModels;
     using DevExpress.XtraPrinting;
     using DevExpress.XtraReports.Parameters;
@@ -119,6 +119,7 @@
                     break;
                 case ProductReportType.OrderDetail:
                     report.DataSource = ViewModel.GetOrderItems((long)CollectionViewModel.SelectedEntityKey);
+                    (report as ProductOrders).SetStates(ViewModel.GetStates());
                     break;
             }
             return report;

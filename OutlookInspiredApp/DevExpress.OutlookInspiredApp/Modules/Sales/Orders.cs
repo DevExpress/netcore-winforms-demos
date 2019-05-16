@@ -22,11 +22,6 @@
             InitViewKind();
             InitViewLayout();
             InitEditors();
-            //netcore3
-            biPrintSubItem.Enabled = false;
-            biNewOrder.Enabled = false;
-            galleryQuickReports.Enabled = false;
-            biMap.Enabled = false;
         }
         protected override void OnDisposing() {
             CollectionPresenter.Dispose();
@@ -51,7 +46,7 @@
             //New
             biNewOrder.BindCommand(() => ViewModel.New(), ViewModel);
             //Map
-            //biMap.BindCommand(() => ViewModel.ShowMap(), ViewModel);
+            biMap.BindCommand(() => ViewModel.ShowMap(), ViewModel);
             //Filter
             biNewCustomFilter.BindCommand(() => ViewModel.NewCustomFilter(), ViewModel);
             //Print

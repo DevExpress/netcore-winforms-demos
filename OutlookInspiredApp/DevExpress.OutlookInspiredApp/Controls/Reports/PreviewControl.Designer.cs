@@ -70,7 +70,7 @@
             this.documentViewerBarManager1.DockControls.Add(this.barDockControlRight);
             this.documentViewerBarManager1.DocumentViewer = this.documentViewerCore;
             this.documentViewerBarManager1.Form = this;
-            //this.documentViewerBarManager1.ImageStream = ((DevExpress.Utils.ImageCollectionStreamer)(resources.GetObject("documentViewerBarManager1.ImageStream")));
+            this.documentViewerBarManager1.ImageStream = ((DevExpress.Utils.ImageCollectionStreamer)(resources.GetObject("documentViewerBarManager1.ImageStream")));
             this.documentViewerBarManager1.Items.AddRange(new DevExpress.XtraBars.BarItem[] {
             this.printPreviewStaticItem1,
             this.progressBarEditItem1,

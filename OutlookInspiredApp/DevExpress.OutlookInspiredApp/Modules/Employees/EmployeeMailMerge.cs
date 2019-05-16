@@ -1,4 +1,5 @@
-﻿namespace DevExpress.DevAV.Modules {
+﻿#if !DXCORE3
+namespace DevExpress.DevAV.Modules {
     using System;
     using System.Drawing;
     using DevExpress.DevAV;
@@ -152,3 +153,4 @@
         #endregion
     }
 }
+#endif

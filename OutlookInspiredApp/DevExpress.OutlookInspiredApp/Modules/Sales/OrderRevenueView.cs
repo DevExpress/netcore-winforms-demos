@@ -26,9 +26,9 @@ namespace DevExpress.DevAV.Modules {
         #endregion
 
         private void showDesignerBarItem_ItemClick(object sender, XtraBars.ItemClickEventArgs e) {
-            using(var tool = new ReportDesignTool(ViewModel.Report)) {
-                tool.ShowRibbonDesignerDialog();
-            }
+            //using(var tool = new ReportDesignTool(ViewModel.Report)) {
+            //    tool.ShowRibbonDesignerDialog();
+            //}
         }
     }
 }

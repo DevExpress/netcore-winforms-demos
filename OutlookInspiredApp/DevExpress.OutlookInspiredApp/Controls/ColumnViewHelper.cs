@@ -1,14 +1,14 @@
 ﻿namespace DevExpress.DevAV {
     using System.Collections.Generic;
     using System.Drawing;
-    using DevExpress.Mvvm.DataModel;
     using DevExpress.DevAV.Common.ViewModel;
+    using DevExpress.Mvvm.DataModel;
     using DevExpress.XtraGrid.Views.Base;
 
     class ColumnViewHelper<TEntity, TID, TUnitOfWork>
         where TEntity : class
         where TUnitOfWork : class, IUnitOfWork {
-        CollectionViewModelBase<TEntity, TEntity, TID, TUnitOfWork> viewModel;
+        CollectionViewModel<TEntity, TID, TUnitOfWork> viewModel;
         ColumnView view;
         public ColumnViewHelper(ColumnView view, CollectionViewModel<TEntity, TID, TUnitOfWork> viewModel) {
             this.view = view;

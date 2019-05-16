@@ -20,7 +20,6 @@ namespace DevExpress.DevAV.Modules {
             LookAndFeel.StyleChanged += LookAndFeel_StyleChanged;
             ViewModel.EntityChanged += ViewModel_EntityChanged;
             snapControl.ZoomChanged += snapControl_ZoomChanged;
-            
         }
         protected override void OnMVVMContextReleasing() {
             ViewModel.EntityChanged -= ViewModel_EntityChanged;
@@ -37,30 +36,12 @@ namespace DevExpress.DevAV.Modules {
             var fluentAPI = mvvmContext.OfType<OrderViewModel>();
             fluentAPI.SetBinding(paidBBI, x => x.Caption, x => x.MarkPaidToolTip);
             fluentAPI.SetBinding(refundBBI, x => x.Caption, x => x.IssueFullRefundToolTip);
-            //editBBI.BindCommand(() => ViewModel.Edit(), ViewModel);
-            editBBI.Enabled = false;
-            editBBI.ImageOptions.ImageUri.ResourceType = typeof(DevExpress.DevAV.MainForm);
-            editBBI.ImageOptions.ImageUri.Uri = "resource://DevExpress.DevAV.Resources.Edit.svg?Size=16x16";
+            editBBI.BindCommand(() => ViewModel.Edit(), ViewModel);
             deleteBBI.BindCommand(() => ViewModel.Delete(), ViewModel);
-            deleteBBI.ImageOptions.ImageUri.ResourceType = typeof(DevExpress.DevAV.MainForm);
-            deleteBBI.ImageOptions.ImageUri.Uri = "resource://DevExpress.DevAV.Resources.Delete.svg?Size=16x16";
             emailBBI.BindCommand(() => ViewModel.MailTo(), ViewModel);
-            emailBBI.ImageOptions.ImageUri.ResourceType = typeof(DevExpress.DevAV.MainForm);
-            emailBBI.ImageOptions.ImageUri.Uri = "resource://DevExpress.DevAV.Resources.ThankYou.svg?Size=16x16";
-            //printBBI.BindCommand(() => ViewModel.Print(), ViewModel);
-            printBBI.ImageOptions.ImageUri.ResourceType = typeof(DevExpress.DevAV.MainForm);
-            printBBI.ImageOptions.ImageUri.Uri = "resource://DevExpress.DevAV.Resources.Print.svg?Size=16x16";
-            printBBI.Enabled = false;
+            printBBI.BindCommand(() => ViewModel.Print(), ViewModel);
             paidBBI.BindCommand(() => ViewModel.MarkPaid(), ViewModel);
-            paidBBI.ImageOptions.ImageUri.ResourceType = typeof(DevExpress.DevAV.MainForm);
-            paidBBI.ImageOptions.ImageUri.Uri = "resource://DevExpress.DevAV.Resources.Paid.svg?Size=16x16";
             refundBBI.BindCommand(() => ViewModel.IssueFullRefund(), ViewModel);
-            refundBBI.ImageOptions.ImageUri.ResourceType = typeof(DevExpress.DevAV.MainForm);
-            refundBBI.ImageOptions.ImageUri.Uri = "resource://DevExpress.DevAV.Resources.Refund.svg?Size=16x16";
-            nextBBI.ImageOptions.ImageUri.ResourceType = typeof(DevExpress.DevAV.MainForm);
-            nextBBI.ImageOptions.ImageUri.Uri = "resource://DevExpress.DevAV.Resources.NextRecord.svg?Size=16x16";
-            previousBBI.ImageOptions.ImageUri.ResourceType = typeof(DevExpress.DevAV.MainForm);
-            previousBBI.ImageOptions.ImageUri.Uri = "resource://DevExpress.DevAV.Resources.PreviousRecord.svg?Size=16x16";
         }
         void ViewModel_EntityChanged(object sender, System.EventArgs e) {
             QueueUIUpdate();

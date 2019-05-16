@@ -38,7 +38,7 @@
                 Ribbon.Pages[0].Text = ribbonModule.Ribbon.Pages[0].Text;
                 Ribbon.MergeRibbon(ribbonModule.Ribbon);
                 Ribbon.StatusBar.MergeStatusBar(ribbonModule.Ribbon.StatusBar);
-                Text = string.Format("{1} - {0} (.Net Core 3.0)", ribbonModule.Ribbon.ApplicationDocumentCaption, "DevAV");
+                Text = string.Format("{1} - {0}", ribbonModule.Ribbon.ApplicationDocumentCaption, "DevAV");
             }
         }
         #region IRibbonModule

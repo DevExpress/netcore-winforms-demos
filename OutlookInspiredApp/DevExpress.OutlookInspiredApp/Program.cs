@@ -11,15 +11,23 @@
         /// <summary>
         /// The main entry point for the application.
         /// </summary>
+        const string AppName = "DevExpressWinOutlookInspiredApp";
         [STAThread]
         static void Main() {
             TaskbarAssistant.Default.Initialize();
-                        DevExpress.XtraEditors.WindowsFormsSettings.ForceDirectXPaint();
+            AppDomain.CurrentDomain.AssemblyResolve += OnCurrentDomainAssemblyResolve;
+            DevAVDataDirectoryHelper.LocalPrefix = "WinOutlookInspiredApp";
+            //
+            bool exit;
+            using(DevAVDataDirectoryHelper.SingleInstanceApplicationGuard(AppName, out exit)) {
+                if(exit)
+                    return;
                 // Global Appearance Settings
-                DevExpress.XtraEditors.WindowsFormsSettings.DefaultRibbonStyle = XtraEditors.DefaultRibbonControlStyle.Office2019;
                 DevExpress.XtraEditors.WindowsFormsSettings.SetDPIAware();
                 DevExpress.XtraEditors.WindowsFormsSettings.EnableFormSkins();
+                DevExpress.XtraEditors.WindowsFormsSettings.ForceDirectXPaint();
                 DevExpress.XtraEditors.WindowsFormsSettings.DefaultLookAndFeel.SetSkinStyle(LookAndFeel.SkinStyle.Office2019Colorful);
+                DevExpress.XtraEditors.WindowsFormsSettings.DefaultRibbonStyle = XtraEditors.DefaultRibbonControlStyle.Office2019;
                 DevExpress.XtraEditors.WindowsFormsSettings.AllowPixelScrolling = Utils.DefaultBoolean.True;
                 DevExpress.Utils.AppearanceObject.DefaultFont = new Font("Segoe UI", AppHelper.GetDefaultSize());
                 // Global Behavior Settings
@@ -35,6 +43,16 @@
                         Application.Run(new MainForm());
                     }
                 }
+            }
+        }
+        //
+        static Assembly OnCurrentDomainAssemblyResolve(object sender, ResolveEventArgs args) {
+            string partialName = DevExpress.Utils.AssemblyHelper.GetPartialName(args.Name).ToLower();
+            if(partialName == "entityframework" || partialName == "system.data.sqlite" || partialName == "system.data.sqlite.ef6") {
+                string path = Path.Combine(Path.GetDirectoryName(typeof(Program).Assembly.Location), "Dll", partialName + ".dll");
+                return Assembly.LoadFrom(path);
+            }
+            return null;
         }
     }
 }

@@ -74,13 +74,8 @@ namespace DevExpress.DevAV.ViewModels {
             this.RaiseCanExecuteChanged(x => x.MailTo());
         }
         public static void ExecuteMailTo(IMessageBoxService messageBoxService, string email) {
-            try {
-                Process.Start("mailto://" + email);
-            }
-            catch {
-                if(messageBoxService != null)
-                    messageBoxService.Show("Mail To: " + email);
-            }
+            if(Data.Utils.SafeProcess.Start("mailto://" + email) == null && messageBoxService != null)
+                messageBoxService.Show("Mail To: " + email);
         }
     }
 }
