@@ -17,7 +17,7 @@ Open a solution in Visual Studio.
 Before you build the solution, ensure that the 'Use previews of the .NET Core SDK' option is enabled. 
 You can find this setting from the Visual Studio main menu: 
 - In Visual Studio 2019 version 16.1+: Tools -> Options -> Environment -> Preview Features
-- In Visual Studio 2019 version 16.0+: Tools -> Options -> Project and Solutions -> .NET Core
+- In Visual Studio 2019 version 16.0: Tools -> Options -> Project and Solutions -> .NET Core
 
 If you downloaded the solutions as a .zip file, you may encounter the following error when you build the solution:
 
