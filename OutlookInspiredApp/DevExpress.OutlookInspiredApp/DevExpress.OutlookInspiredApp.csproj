@@ -828,6 +828,10 @@
     <EmbeddedResource Include="Resources\MailMerge\Sales Order Summary Report.snx" />
     <EmbeddedResource Include="Resources\MailMerge\Welcome to DevAV.rtf" />
     <EmbeddedResource Include="Resources\MailMerge\Welcome to DevAV.snx" />
+    <EmbeddedResource Include="Resources\MailMerge\Sales Invoice.snx" />
+    <EmbeddedResource Include="Resources\MailMerge\Sales Order Summary Report.snx" />
+    <EmbeddedResource Include="Resources\MailMerge\Welcome to DevAV.rtf" />
+    <EmbeddedResource Include="Resources\MailMerge\Welcome to DevAV.snx" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Resources\Buttons\glyph-backg-hover.png" />
