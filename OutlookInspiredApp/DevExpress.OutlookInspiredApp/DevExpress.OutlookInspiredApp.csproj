@@ -2,8 +2,8 @@
   <PropertyGroup>
     <ProjectGuid>{3932816E-D0B4-08A9-2715-8D5B7DC201D8}</ProjectGuid>
     <TargetFramework>netcoreapp3.0</TargetFramework>
-    <UseWindowsForms>True</UseWindowsForms>
-	  <OutputType>WinExe</OutputType>
+    <UseWinForms>True</UseWinForms>
+    <OutputType>WinExe</OutputType>
     <EnableDefaultItems>False</EnableDefaultItems>
     <Configurations>Debug;Release</Configurations>
     <GenerateAssemblyInfo>False</GenerateAssemblyInfo>
@@ -157,7 +157,9 @@
     <Compile Include="Modules\Customers\CustomerView.Designer.cs">
       <DependentUpon>CustomerView.cs</DependentUpon>
     </Compile>
-    <Compile Include="Modules\Employees\EmployeeMailMerge.cs" />
+    <Compile Include="Modules\Employees\EmployeeMailMerge.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Include="Modules\Employees\EmployeeMailMerge.Designer.cs">
       <DependentUpon>EmployeeMailMerge.cs</DependentUpon>
     </Compile>
@@ -239,7 +241,9 @@
     <Compile Include="Modules\Sales\QuickReportView\OrderDocQuickReportView.Designer.cs">
       <DependentUpon>OrderDocQuickReportView.cs</DependentUpon>
     </Compile>
-    <Compile Include="Modules\Sales\OrderMailMerge.cs" />
+    <Compile Include="Modules\Sales\OrderMailMerge.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Include="Modules\Sales\OrderMailMerge.Designer.cs">
       <DependentUpon>OrderMailMerge.cs</DependentUpon>
     </Compile>
@@ -828,10 +832,6 @@
     <EmbeddedResource Include="Resources\MailMerge\Sales Order Summary Report.snx" />
     <EmbeddedResource Include="Resources\MailMerge\Welcome to DevAV.rtf" />
     <EmbeddedResource Include="Resources\MailMerge\Welcome to DevAV.snx" />
-    <EmbeddedResource Include="Resources\MailMerge\Sales Invoice.snx" />
-    <EmbeddedResource Include="Resources\MailMerge\Sales Order Summary Report.snx" />
-    <EmbeddedResource Include="Resources\MailMerge\Welcome to DevAV.rtf" />
-    <EmbeddedResource Include="Resources\MailMerge\Welcome to DevAV.snx" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Resources\Buttons\glyph-backg-hover.png" />
@@ -1103,7 +1103,7 @@
       <Visible>False</Visible>
       <ProductName>Windows Installer 4.5</ProductName>
       <Install>true</Install>
-  </BootstrapperPackage>
+    </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
     <Content Include="Icons\DevExpress.ico">
@@ -1237,7 +1237,7 @@
     <EmbeddedResource Include="Resources\NewEmploye.svg" />
     <EmbeddedResource Include="Resources\NewGroup.svg" />
   </ItemGroup>
- <ItemGroup>
+  <ItemGroup>
     <PackageReference Include="DevExpress.WindowsDesktop.Core" Version="19.1.3-ctp" />
     <PackageReference Include="DevExpress.WindowsDesktop.Document.Processor" Version="19.1.3-ctp" />
     <PackageReference Include="DevExpress.WindowsDesktop.Win" Version="19.1.3-ctp" />
@@ -1245,10 +1245,10 @@
     <PackageReference Include="Microsoft.EntityFrameworkCore.Proxies" Version="3.0.0-preview3.19153.1" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="3.0.0-preview3.19153.1" />
   </ItemGroup>
- <ItemGroup>
-   <ProjectReference Include="..\DevExpress.DevAV\DevExpress.DevAV.Data\DevExpress.DevAV.Data.csproj" />
-   <ProjectReference Include="..\DevExpress.DevAV\DevExpress.DevAV.Reports\DevExpress.DevAV.Reports.csproj" />
- </ItemGroup>
-  <PropertyGroup />  
+  <ItemGroup>
+    <ProjectReference Include="..\DevExpress.DevAV\DevExpress.DevAV.Data\DevExpress.DevAV.Data.csproj" />
+    <ProjectReference Include="..\DevExpress.DevAV\DevExpress.DevAV.Reports\DevExpress.DevAV.Reports.csproj" />
+  </ItemGroup>
+  <PropertyGroup />
 </Project>
 
