@@ -2,7 +2,7 @@
   <PropertyGroup>
     <ProjectGuid>{3932816E-D0B4-08A9-2715-8D5B7DC201D8}</ProjectGuid>
     <TargetFramework>netcoreapp3.0</TargetFramework>
-    <UseWinForms>True</UseWinForms>
+    <UseWindowsForms>True</UseWindowsForms>
     <OutputType>WinExe</OutputType>
     <EnableDefaultItems>False</EnableDefaultItems>
     <Configurations>Debug;Release</Configurations>
