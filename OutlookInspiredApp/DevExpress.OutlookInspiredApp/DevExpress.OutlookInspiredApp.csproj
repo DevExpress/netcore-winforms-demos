@@ -2,7 +2,8 @@
   <PropertyGroup>
     <ProjectGuid>{3932816E-D0B4-08A9-2715-8D5B7DC201D8}</ProjectGuid>
     <TargetFramework>netcoreapp3.0</TargetFramework>
-	<OutputType>WinExe</OutputType>
+    <UseWindowsForms>True</UseWindowsForms>
+	  <OutputType>WinExe</OutputType>
     <EnableDefaultItems>False</EnableDefaultItems>
     <Configurations>Debug;Release</Configurations>
     <GenerateAssemblyInfo>False</GenerateAssemblyInfo>
@@ -156,9 +157,7 @@
     <Compile Include="Modules\Customers\CustomerView.Designer.cs">
       <DependentUpon>CustomerView.cs</DependentUpon>
     </Compile>
-    <Compile Include="Modules\Employees\EmployeeMailMerge.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
+    <Compile Include="Modules\Employees\EmployeeMailMerge.cs" />
     <Compile Include="Modules\Employees\EmployeeMailMerge.Designer.cs">
       <DependentUpon>EmployeeMailMerge.cs</DependentUpon>
     </Compile>
@@ -240,9 +239,7 @@
     <Compile Include="Modules\Sales\QuickReportView\OrderDocQuickReportView.Designer.cs">
       <DependentUpon>OrderDocQuickReportView.cs</DependentUpon>
     </Compile>
-    <Compile Include="Modules\Sales\OrderMailMerge.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
+    <Compile Include="Modules\Sales\OrderMailMerge.cs" />
     <Compile Include="Modules\Sales\OrderMailMerge.Designer.cs">
       <DependentUpon>OrderMailMerge.cs</DependentUpon>
     </Compile>
